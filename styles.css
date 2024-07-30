@@ -1,27 +1,16 @@
-/* Common Design */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
-/* Scrollbar Styles for Webkit Browsers */
-::-webkit-scrollbar {
-    width: 12px;
+:root {
+    --sidebar-bg: #005F6B;
+    --sidebar-hover: #00798C;
+    --text-color: #ffffff;
+    --hover-text-color: #E5E5E5;
+    --scrollbar-bg: #f1f1f1;
+    --scrollbar-thumb: #888;
+    --scrollbar-thumb-hover: #555;
 }
 
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-*,
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,19 +18,36 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f0f0f0;
+}
+
+/* Scrollbar Styles for the entire page */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
 }
 
 .sidebar-container {
     width: 250px;
     height: 100vh;
-    background-color: #005F6B;
-    color: white;
+    background-color: var(--sidebar-bg);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+  overflow-y: auto;
+    overflow-x: visible;
 }
 
 .logo-container {
@@ -56,71 +62,84 @@ body {
 
 .sidebar {
     display: flex;
-    height: 100%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-grow: 1;
 }
 
 .sidebar-nav {
     flex-grow: 1;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .sidebar-nav ul {
-    padding: 0 20px;
     list-style: none;
+    padding: 0;
 }
 
 .sidebar-nav ul li {
-    margin-bottom: 10px;
-    padding: 0 10px;
+    margin-bottom: 5px;
 }
 
 .sidebar-nav ul li a {
     display: flex;
     align-items: center;
+    padding: 10px 20px;
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.sidebar-nav ul li a:hover {
-    color: black;
+.sidebar-nav ul li a:hover,
+.sidebar-nav ul li a:focus {
+    background-color: var(--sidebar-hover);
+    color: var(--hover-text-color);
 }
 
 .sidebar-nav ul li a svg {
     margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+.dropdown {
+    position: relative;
 }
 
-.sidebar-nav ul li:hover {
-    background-color: white;
-    border-radius: 5px;
+.dropdown-menu {
+    display: none;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: var(--sidebar-bg);
+    border-radius: 0 5px 5px 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 8px 20px;
+    font-size: 0.9em;
 }
 
 .sidebar-signout {
     padding: 20px 0;
 }
 
-.sidebar-item.active a {
-    color: white;
+.sidebar-signout a {
+    color: var(--text-color);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
-.dropdown-menu {
-    display: none;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: relative;
- background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
+.sidebar-signout a:hover {
+    background-color: var(--sidebar-hover);
 }
