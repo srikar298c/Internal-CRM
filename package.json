@@ -1,0 +1,11 @@
+{
+  "name": "internal_crm",
+  "version": "1.0.0",
+  "description": "This repository consits of code for Internal CRM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
