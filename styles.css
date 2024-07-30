@@ -8,8 +8,8 @@
     --scrollbar-bg: #f1f1f1;
     --scrollbar-thumb: #888;
     --scrollbar-thumb-hover: #555;
-    --boxshadow-edge:#018091;
-} 
+    --boxshadow-edge: #018091;
+}
 
 * {
     margin: 0;
@@ -21,6 +21,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f0f0f0;
 }
+
 
 /* Scrollbar Styles for the entire page */
 ::-webkit-scrollbar {
@@ -48,8 +49,8 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
-    overflow-y: auto;
-    overflow-x: visible;
+    overflow:hidden;
+    align-items: center;
 }
 
 .logo-container {
@@ -61,18 +62,20 @@ body {
     max-width: 100%;
     height: auto;
 }
-
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.sidebar{
+    height: 100%;
 }
 
 .sidebar-nav {
-    flex-grow: 1;
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100% - 20px);
+}
+.section-1,
+.section-2 {
+    list-style-type: none;
+    padding: 0;
 }
 
 .sidebar-nav ul {
@@ -84,13 +87,19 @@ body {
     margin-bottom: 5px;
 }
 
-.sidebar-nav ul li a {
+.sidebar-nav  a {
     display: flex;
-    align-items: center;
-    padding:5px 20px;
-    text-decoration: none;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
+}
+.sidebar-nav svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
 
 .sidebar-nav ul li a:hover,
@@ -98,12 +107,12 @@ body {
     background-color: var(--sidebar-hover);
     color: var(--hover-text-color);
 }
-
-.sidebar-nav ul li a svg {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
+.sidebar-nav a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
 }
+
+
 .dropdown {
     position: relative;
 }
@@ -123,8 +132,8 @@ body {
     min-width: 150px;
 }
 
-.dropdown:hover > .dropdown-menu,
-.dropdown:focus-within > .dropdown-menu {
+.dropdown:hover>.dropdown-menu,
+.dropdown:focus-within>.dropdown-menu {
     display: block;
 }
 
@@ -133,21 +142,6 @@ body {
     font-size: 0.9em;
 }
 
-.sidebar-signout {
-    padding: 20px 0;
-}
-
-.sidebar-signout a {
-    color: var(--text-color);
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.sidebar-signout a:hover {
-    background-color: var(--sidebar-hover);
-}
 .container {
     display: flex;
     flex-direction: column;
@@ -155,7 +149,7 @@ body {
     margin-left: 260px;
     top: 0;
     width: auto;
-    padding: 10px ;
+    padding: 10px;
 }
 
 .header {
@@ -163,49 +157,141 @@ body {
     flex-direction: row;
     align-items: center;
     height: auto;
-    padding: 10px ;
-    
+    padding: 10px;
     justify-content: space-between;
     position: sticky;
     top: 0;
     width: auto;
     z-index: 1000;
-  border: 1px solid var(--boxshadow-edge);
- border-radius: 10px;
- box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--boxshadow-edge);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
- .header:hover {
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
+.header:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
-        .header-title h2 {
-            margin: 0;
-            font-size: 24px;
-            color: #333;
-            /* font-family: 'Arial', sans-serif; */
-        }
+.header-title h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    /* font-family: 'Arial', sans-serif; */
+}
 
-        .header-lastitem {
-            display: flex;
-            align-items: center; 
-        }
+.header-lastitem {
+    display: flex;
+    align-items: center;
+}
 
-        .profilename{
-            display: flex;
-            flex-direction: column;
-          
-            align-items: end;
-        }
+.profilename {
+    display: flex;
+    flex-direction: column;
 
-        .header-lastitem span:last-child {
-            font-weight: bold;
-            margin-left: 5px;
-        }
+    align-items: end;
+}
 
-        .header-lastitem img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-left: 10px;
-        }
+.header-lastitem span:last-child {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.header-lastitem img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+.main-content {
+    position: relative;
+    margin: 10px auto;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    border: 1px solid var(--boxshadow-edge);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    z-index: 1000;
+}
+.marquee-container {
+    max-width: 1200px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee {
+    display: inline-block;
+    animation: marquee 20s infinite alternate;
+    
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+
+    }
+
+    to {
+        transform: translateX(-100%);
+
+    }
+}
+
+/********************************************************Dashboard **************************************************/
+.latestupdate {
+    /* width: auto; */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+}
+
+.latestupdate:hover .latestupdate-details {
+    max-height: 200px;
+    padding: 20px;
+    background-color: #fffdd0;
+}
+
+.latestupdate-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    cursor: pointer;
+
+}
+
+.latestupdate-header svg {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.latestupdate-header:hover svg {
+    transform: rotate(180deg);
+}
+
+.latestupdate-header h3 {
+    margin: 0;
+    font-size: 1.2em;
+    flex-grow: 1;
+}
+
+.latestupdate-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background-color: #fffdd0;
+    padding: 0 20px;
+}
+
+.latestupdate-details p {
+    margin: 0;
+}
