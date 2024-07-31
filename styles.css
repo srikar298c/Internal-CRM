@@ -299,3 +299,108 @@ body {
 .latestupdate-details p {
     margin: 0;
 }
+.dashboard-nav{
+    display: flex;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid var(--boxshadow-edge);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+.dashboard-nav-button {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    background: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+    
+}
+.dashboard-nav-button a{
+    text-decoration: none;
+    color: #333;
+}
+
+.dashboard-nav-button.active, .dashboard-nav-button:hover {
+    background-color: #8ec1c8;
+    color: var(--sidebar-bg);
+}
+.dashboard-nav-button:hover:not(.active) {
+    background-color: #d0d0d0;
+}
+
+.projects-container {
+ width: 95%;
+  margin: 0 auto;
+}
+h1 {
+  color: #006B77;
+  font-size: 24px;
+    margin-bottom: 30px;
+  text-align: left;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  color: #333;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.card-header h2 {
+   font-size: 18px;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+.card-header h2:first-child {
+  text-align: left;
+}
+
+.card-header h2:last-child {
+  text-align: right;
+}
+.expand-icon {
+  font-size: 20px;
+    cursor: pointer;
+}
+
+.card-content {
+  padding: 15px;
+  display: flex;
+justify-content: space-between;
+}
+.people {
+  width: 25%;
+}
+.people p {
+  margin: 5px 0;
+}
+
+.phone {
+  color: #666;
+}
+
+.description {
+      width: 70%;
+  color: #333;
+  line-height: 1.6;
+  margin-top: 15px;
+  
+}
