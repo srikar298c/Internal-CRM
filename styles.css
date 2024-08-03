@@ -142,10 +142,13 @@ body {
   min-width: 150px;
 }
 
-.dropdown:hover > .dropdown-menu,
+/* .dropdown:hover > .dropdown-menu,
 .dropdown:focus-within > .dropdown-menu {
   display: block;
-}
+} */
+  .dropdown.active .dropdown-menu {
+          display: block;
+        }
 
 .dropdown-menu li a {
   padding: 8px 20px;
@@ -226,9 +229,7 @@ body {
   width: auto;
   z-index: 1000;
 }
-.main-content :hover{
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
+
 .marquee-container {
   max-width: 1200px;
   overflow: hidden;
@@ -255,55 +256,60 @@ body {
 
 /********************************************************Dashboard **************************************************/
 
-.latestupdate {
-  /* width: auto; */
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  margin: 10px 0;
-}
-
-.latestupdate:hover .latestupdate-details {
-  max-height: 200px;
-  padding: 20px;
-  background-color: #fffdd0;
-}
-
-.latestupdate-header {
-  display: flex;
-  align-items: center;
-  padding: 15px;
-  background-color: #fff;
-  cursor: pointer;
-}
-
-.latestupdate-header svg {
-  margin-right: 10px;
-  transition: transform 0.3s ease;
-}
-
-.latestupdate-header:hover svg {
-  transform: rotate(180deg);
-}
-
-.latestupdate-header h3 {
-  margin: 0;
-  font-size: 1.2em;
-  flex-grow: 1;
-}
-
-.latestupdate-details {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  background-color: #fffdd0;
-  padding: 0 20px;
-}
-
-.latestupdate-details p {
-  margin: 0;
-}
+     .latestupdate {
+       border: 1px solid #ccc;
+       border-radius: 8px;
+       overflow: hidden;
+       transition: all 0.3s ease;
+       margin: 10px 0;
+     }
+  
+     .latestupdate-header {
+       display: flex;
+       align-items: center;
+       padding: 15px;
+       background-color: #fff;
+       cursor: pointer;
+     }
+  
+     .latestupdate-header svg {
+       margin-right: 10px;
+       width: 20px;
+       height: 20px;
+       transition: transform 0.3s ease;
+     }
+  
+     .latestupdate-header.active svg {
+       transform: rotate(180deg);
+     }
+  
+     .latestupdate-header h5 {
+       margin: 0;
+       font-size: 16px;
+       flex-grow: 1;
+       font-weight: 300;
+     }
+  
+     .latestupdate-details {
+       max-height: 0;
+       overflow: hidden;
+       transition: max-height 0.3s ease, padding 0.3s ease;
+       background-color: #fffdd0;
+       padding: 0 20px;
+     }
+  
+     .latestupdate-details.open {
+       max-height: 200px;
+       padding: 20px;
+     }
+  
+     .latestupdate-details p {
+       margin-top: 20px;
+     }
+     .latestupdate-details h3 {
+       font-size: 1.2rem;
+       font-weight: 400;
+     }
 
 .dashboard-nav {
   display: flex;
@@ -314,29 +320,55 @@ body {
   width: 80%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
+.dashboard-nav :last-child{
+  margin-right: 0;
+}
+.dashboard-nav :first-child{
+  margin-left: 0;
+}
 .dashboard-nav-button {
   flex: 1;
   padding: 12px 20px;
-  border: none;
-  background: none;
+   border: 1px groove var(--boxshadow-edge);
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 18px;
   text-align: center;
   color: #333;
+ margin: 0 10px;
+
 }
 
 .dashboard-nav-button a {
   text-decoration: none;
   color: #333;
 }
+.dashboard-nav-items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-nav-items svg{
+  width: 60px;
+  height: 60px;
+}
+.dashboard-nav-items > .title{
+display: flex;
+flex-direction: column;
+align-items: end;
+}
+.dashboard-nav-items > .title p{
+font-size: 36px;
+font-weight: 600;
+}
 
 .dashboard-nav-button.active,
 .dashboard-nav-button:hover {
   background-color: #8ec1c8;
   color: var(--sidebar-bg);
+  border: none;
 }
 
 .dashboard-nav-button:hover:not(.active) {
@@ -353,6 +385,11 @@ h1 {
   font-size: 24px;
   margin-bottom: 30px;
   text-align: left;
+}
+.project-title{
+  display: flex;
+  align-items: center;
+  
 }
 
 .project-card {
