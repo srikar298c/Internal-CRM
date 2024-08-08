@@ -597,7 +597,20 @@ h1 {
   cursor: pointer;
   margin-right: 5px;
 }
+.member-name {
+  display: inline-block;
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  font-size: 12px;
+}
 
+.member-phone {
+  color: gray;
+  font-size: 12px;
+}
 .project-popup {
   display: none;
   position: fixed;

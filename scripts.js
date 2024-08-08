@@ -1,3 +1,4 @@
+
 //*********************************************Common to all pages */
 // For sidebar a active
 const currentFolder = window.location.pathname.split('/').slice(-2, -1)[0];
@@ -101,9 +102,13 @@ function populateTable(data) {
         row.innerHTML = `
             <td>${project.country}</td>
             <td>${project.projectName}</td>
-            <td><span class="label-${project.status}">${project.label}</span></td>
-            <td>${project.activeMembers.map(member => `${member.name}<br>${member.phone}`).join('<br><br>')}</td>
-            <td>${project.createdBy.name}<br>${project.createdBy.phone}</td>
+            <td><div class="project-label-container">
+          <span>${project.label}</span>
+          <span class="label-${project.status}">${project.status}</span>
+        </div></td>
+            <td>${project.activeMembers.map(member => `<span class="member-name">${member.name}</span>
+                    <span class="member-phone">${member.phone}</span>`).join('<br>')}</td>
+            <td><span class="member-name">${project.createdBy.name}</span><span class="member-phone">${project.createdBy.phone}</span></td>
             <td>
                 <span class="icon stats-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
