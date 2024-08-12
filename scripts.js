@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-//Projects
+//Projects folder
 let projectData = [];
 
 // Fetch project data
