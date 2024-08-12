@@ -132,57 +132,38 @@
             </div>
         </div>
         <div class="main-content">
-        <div class="projects-main-content">
-        <div class="projects-header">
-            <div class="projects-filter">
-                <span class="location-icon">📍</span>
-                <select id="countryFilter">
-                    <option value="">Country</option>
-                </select>
-            </div>
-            <div class="projects-actions">
-                <button id="addCandidate" class="btn-add-candidate">+ Add Candidate</button>
-                <button id="submissions" class="btn-submissions">Submissions</button>
-            </div>
-        </div>
-        <table id="projectTable" class="projects-table">
-            <thead>
-                <tr>
-                    <th>Country <i class="fas fa-sort"></i></th>
-                    <th>Name Of the Project <i class="fas fa-sort"></i></th>
-                    <th>Label <i class="fas fa-sort"></i></th>
-                    <th>Active Members</th>
-                    <th>Created by</th>
-                    <th>Details</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Table rows will be dynamically added here -->
-            </tbody>
-        </table>
+      <div class="filter-section">
+        <button class="filter-button" id="filterBtn">Filter <span class="filter-count">0</span></button>
+        <select class="filter-select" id="statusFilter"><option>Status</option></select>
+        <select class="filter-select" id="genderFilter"><option>Gender</option></select>
+        <select class="filter-select" id="ageFilter"><option>Age</option></select>
+        <select class="filter-select" id="qualificationFilter"><option>Qualification</option></select>
+        <select class="filter-select" id="departmentFilter"><option>Department</option></select>
+        <select class="filter-select" id="degreeFilter"><option>Degree</option></select>
+        <select class="filter-select" id="examStatusFilter"><option>Exam Status</option></select>
+        <select class="filter-select" id="experienceFilter"><option>Experience</option></select>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search for any keyword...">
     </div>
-<!-- Project Details Popup -->
-<div id="popup" class="popup">
-    <div class="popup-content">
-        <button class="close-btn project-popup-close">&times;</button>
-        <div class="popup-header project-popup-header">
-            <h2 class="country"></h2>
-            <h3 class="project-name"></h3>
-            <div class="project-status"></div>
-        </div>
-        <div class="popup-tabs project-popup-tabs">
-            <button class="project-popup-tab active" data-tab="eligibility">Eligibility Criteria</button>
-            <button class="project-popup-tab" data-tab="perks">Perks & Salary</button>
-            <button class="project-popup-tab" data-tab="procedure">Standard Procedure</button>
-            <button class="project-popup-tab" data-tab="charges">Service Charges</button>
-        </div>
-        <div id="tabContent" class="tab-content"></div>
-    </div>
-</div>
 
-
-
-
+    <table id="candidateTable">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="selectAll"></th>
+                <th>Candidate ID</th>
+                <th>Name of the Candidate</th>
+                <th>Contact No</th>
+                <th>Mail ID</th>
+                <th>Experience</th>
+                <th>Department</th>
+                <th>Qualification</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="candidateTableBody">
+            <!-- Candidate rows will be dynamically inserted here -->
+        </tbody>
+    </table>
     </div>
     </div>
 <script src="../../../../Internal-CRM/scripts.js"></script>
