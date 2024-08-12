@@ -594,6 +594,9 @@ tbody tr svg{
   border-bottom: 1px solid #333;
 
 }
+.sortable{
+  cursor: pointer;
+}
 
 /* .projects-table thead {
   background-color: #f2f2f2;

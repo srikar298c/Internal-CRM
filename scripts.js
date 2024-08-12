@@ -81,13 +81,13 @@ fetch('../../../../Internal-CRM/project_data.json')
     .then(response => response.json())
     .then(data => {
         projectData = data;
-        populateTable(projectData);
+        populateProjectTable(projectData);
         populateCountryFilter(projectData);
     })
     .catch(error => console.error('Error loading project data:', error));
 
 // Populate the table with project data
-function populateTable(data) {
+function populateProjectTable(data) {
     const tableBody = document.querySelector('#projectTable tbody');
     tableBody.innerHTML = '';
 
@@ -152,7 +152,7 @@ function filterTable() {
     const filteredData = selectedCountry
         ? projectData.filter(project => project.country === selectedCountry)
         : projectData;
-    populateTable(filteredData);
+    populateProjectTable(filteredData);
 }
 // Show popup with project details
 function showPopup(country) {
@@ -326,3 +326,115 @@ function sortTable(columnIndex, ascending) {
     document.querySelector(`#projectTable th:nth-child(${columnIndex + 1})`).classList.toggle('th-sort-asc', ascending);
     document.querySelector(`#projectTable th:nth-child(${columnIndex + 1})`).classList.toggle('th-sort-desc', !ascending);
 }
+
+
+async function fetchData() {
+        try {
+            const response = await fetch('../../../../Internal-CRM/global-data.json');
+            const candidatesData = await response.json();
+            populateGlobalDatabaseTable(candidatesData);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    function createCandidateDiv(data) {
+        const div = document.createElement('div');
+        div.className = 'leads-candidate-data';
+
+        const summary = document.createElement('div');
+        summary.className = 'candidate-summary';
+        summary.innerHTML = `
+        <input type="checkbox" class="checkbox">
+        <div class="caret-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg></div>
+            <img src="${data['display picture']}" alt="${data.name}" class="candidate-image">
+            <div class="candidate-info">
+                <div class="candidate-main-info">
+                    <span class="candidate-id">ID: ${data.id}</span>
+                    <span class="candidate-name">${data.name}</span>
+                    <span class="candidate-contact">${data.mobileNumber} | ${data.email}</span>
+                </div>
+                <div class="candidate-details">
+                    <span>${data.experience}</span>
+                    <span>${data.department}</span>
+                    <select class="status-select">
+                        <option value="active" ${data.status === 'Active' ? 'selected' : ''}>Active</option>
+                        <option value="inactive" ${data.status === 'Inactive' ? 'selected' : ''}>Inactive</option>
+                    </select>
+                </div>
+                <div class="action-dots">⋮</div>
+            </div>
+        `;
+
+        const additionalInfo = document.createElement('div');
+        additionalInfo.className = 'additional-info';
+        additionalInfo.innerHTML = `
+            <div class="info-group"><span class="info-label">Gender:</span>${data.gender}</div>
+            <div class="info-group"><span class="info-label">Passport:</span>Not Available</div>
+            <div class="info-group"><span class="info-label">Client Label:</span>${data.clients.label}</div>
+            <div class="info-group"><span class="info-label">Client Status:</span>${data.clients.clientStatus}</div>
+            <div class="button-group">
+                <button class="icon-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+  <path fill="currentColor" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z"/>
+</svg></button>
+                <button class="icon-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100">
+  <path fill="currentColor" d="M46.05 60.163H31.923c-.836 0-1.513.677-1.513 1.513V83.61c0 .836.677 1.513 1.513 1.513H46.05c.836 0 1.512-.677 1.512-1.513V61.675c0-.836-.677-1.512-1.512-1.512m22.027-45.285H53.95c-.836 0-1.513.677-1.513 1.513v67.218c0 .836.677 1.513 1.513 1.513h14.127c.836 0 1.513-.677 1.513-1.513V16.391c0-.836-.677-1.513-1.513-1.513m22.14 20.421H76.09c-.836 0-1.513.677-1.513 1.513v46.797c0 .836.677 1.513 1.513 1.513h14.126c.836 0 1.513-.677 1.513-1.513V36.812c0-.835-.677-1.513-1.512-1.513m-66.307 0H9.783c-.836 0-1.513.677-1.513 1.513v46.797c0 .836.677 1.513 1.513 1.513H23.91c.836 0 1.513-.677 1.513-1.513V36.812c0-.835-.677-1.513-1.513-1.513"/>
+</svg></button>
+                <button class="icon-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+  <path fill="currentColor" d="M42.76 50A8 8 0 0 0 40 56v168a8 8 0 0 0 16 0v-44.23c26.79-21.16 49.87-9.75 76.45 3.41c16.4 8.11 34.06 16.85 53 16.85c13.93 0 28.54-4.75 43.82-18a8 8 0 0 0 2.76-6V56a8 8 0 0 0-13.27-6c-28 24.23-51.72 12.49-79.21-1.12C111.07 34.76 78.78 18.79 42.76 50M216 172.25c-26.79 21.16-49.87 9.74-76.45-3.41c-25-12.35-52.81-26.13-83.55-8.4V59.79c26.79-21.16 49.87-9.75 76.45 3.4c25 12.35 52.82 26.13 83.55 8.4Z"/>
+</svg></button>
+                <button class="icon-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+  <path fill="currentColor" d="M15 13h1.5v2.82l2.44 1.41l-.75 1.3L15 16.69zm8 3c0 3.87-3.13 7-7 7c-1.91 0-3.64-.76-4.9-2H8c-1.1 0-2-.9-2-2V7h12v2.29c2.89.86 5 3.54 5 6.71M9 16c0-3.87 3.13-7 7-7H8v10h1.67c-.43-.91-.67-1.93-.67-3m7-5c-2.76 0-5 2.24-5 5s2.24 5 5 5s5-2.24 5-5s-2.24-5-5-5m-.5-7H19v2H5V4h3.5l1-1h5z"/>
+</svg></button>
+                <button class="icon-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36">
+  <path fill="currentColor" d="M32.51 27.83A14.4 14.4 0 0 1 30 24.9a12.6 12.6 0 0 1-1.35-4.81v-4.94A10.81 10.81 0 0 0 19.21 4.4V3.11a1.33 1.33 0 1 0-2.67 0v1.31a10.81 10.81 0 0 0-9.33 10.73v4.94a12.6 12.6 0 0 1-1.35 4.81a14.4 14.4 0 0 1-2.47 2.93a1 1 0 0 0-.34.75v1.36a1 1 0 0 0 1 1h27.8a1 1 0 0 0 1-1v-1.36a1 1 0 0 0-.34-.75M5.13 28.94a16.2 16.2 0 0 0 2.44-3a14.2 14.2 0 0 0 1.65-5.85v-4.94a8.74 8.74 0 1 1 17.47 0v4.94a14.2 14.2 0 0 0 1.65 5.85a16.2 16.2 0 0 0 2.44 3Z" class="clr-i-outline clr-i-outline-path-1"/>
+  <path fill="currentColor" d="M18 34.28A2.67 2.67 0 0 0 20.58 32h-5.26A2.67 2.67 0 0 0 18 34.28" class="clr-i-outline clr-i-outline-path-2"/>
+  <path fill="none" d="M0 0h36v36H0z"/>
+</svg></button>
+                <button class="icon-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+  <path fill="currentColor" d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"/>
+</svg></button>
+                <button class="icon-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+  <path fill="currentColor" d="m23 12l-2.44-2.78l.34-3.68l-3.61-.82l-1.89-3.18L12 3L8.6 1.54L6.71 4.72l-3.61.81l.34 3.68L1 12l2.44 2.78l-.34 3.69l3.61.82l1.89 3.18L12 21l3.4 1.46l1.89-3.18l3.61-.82l-.34-3.68zm-13 5l-4-4l1.41-1.41L10 14.17l6.59-6.59L18 9z"/>
+</svg></button>
+                <button class="submit-button">Submit</button>
+            </div>
+        `;
+
+        div.appendChild(summary);
+        div.appendChild(additionalInfo);
+
+        const caretIcon = summary.querySelector('.caret-icon');
+        caretIcon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            additionalInfo.classList.toggle('open');
+            caretIcon.classList.toggle('open');
+        });
+
+        return div;
+    }
+
+    function populateGlobalDatabaseTable(candidatesData) {
+        const container = document.getElementById('candidateContainer');
+        candidatesData.forEach(data => {
+            const candidateDiv = createCandidateDiv(data);
+            container.appendChild(candidateDiv);
+        });
+    }
+
+    function initializeFilters() {
+        // Implement filter logic here
+    }
+
+    function setupSearch() {
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', () => {
+            // Implement search logic here
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchData();
+        initializeFilters();
+        setupSearch();
+    });
