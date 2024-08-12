@@ -132,57 +132,19 @@
             </div>
         </div>
         <div class="main-content">
-        <div class="projects-main-content">
-        <div class="projects-header">
-            <div class="projects-filter">
-                <span class="location-icon">📍</span>
-                <select id="countryFilter">
-                    <option value="">Country</option>
-                </select>
-            </div>
-            <div class="projects-actions">
-                <button id="addCandidate" class="btn-add-candidate">+ Add Candidate</button>
-                <button id="submissions" class="btn-submissions">Submissions</button>
-            </div>
-        </div>
-        <table id="projectTable" class="projects-table">
-            <thead>
-                <tr>
-                    <th class="sortable"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M13.78 10.47a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l.97.97V5.75a.75.75 0 0 1 1.5 0v5.69l.97-.97a.75.75 0 0 1 1.06 0M2.22 5.53a.75.75 0 0 1 0-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1-1.06 1.06l-.97-.97v5.69a.75.75 0 0 1-1.5 0V4.56l-.97.97a.75.75 0 0 1-1.06 0" clip-rule="evenodd"/></svg>Country</th>
-                    <th class="sortable"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M13.78 10.47a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l.97.97V5.75a.75.75 0 0 1 1.5 0v5.69l.97-.97a.75.75 0 0 1 1.06 0M2.22 5.53a.75.75 0 0 1 0-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1-1.06 1.06l-.97-.97v5.69a.75.75 0 0 1-1.5 0V4.56l-.97.97a.75.75 0 0 1-1.06 0" clip-rule="evenodd"/></svg>Name Of the Project </th>
-                    <th class="sortable"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M13.78 10.47a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l.97.97V5.75a.75.75 0 0 1 1.5 0v5.69l.97-.97a.75.75 0 0 1 1.06 0M2.22 5.53a.75.75 0 0 1 0-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1-1.06 1.06l-.97-.97v5.69a.75.75 0 0 1-1.5 0V4.56l-.97.97a.75.75 0 0 1-1.06 0" clip-rule="evenodd"/></svg>Label </i></th>
-                    <th class="sortable"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M13.78 10.47a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l.97.97V5.75a.75.75 0 0 1 1.5 0v5.69l.97-.97a.75.75 0 0 1 1.06 0M2.22 5.53a.75.75 0 0 1 0-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1-1.06 1.06l-.97-.97v5.69a.75.75 0 0 1-1.5 0V4.56l-.97.97a.75.75 0 0 1-1.06 0" clip-rule="evenodd"/></svg>Active Members</th>
-                    <th class="sortable"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M13.78 10.47a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l.97.97V5.75a.75.75 0 0 1 1.5 0v5.69l.97-.97a.75.75 0 0 1 1.06 0M2.22 5.53a.75.75 0 0 1 0-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1-1.06 1.06l-.97-.97v5.69a.75.75 0 0 1-1.5 0V4.56l-.97.97a.75.75 0 0 1-1.06 0" clip-rule="evenodd"/></svg>Created by</th>
-                    <th>Details</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Table rows will be dynamically added here -->
-            </tbody>
-        </table>
+      <div class="filter-section">
+        <button class="filter-button" id="filterBtn">Filter <span class="filter-count">0</span></button>
+        <select class="filter-select" id="statusFilter"><option>Status</option></select>
+        <select class="filter-select" id="genderFilter"><option>Gender</option></select>
+        <select class="filter-select" id="ageFilter"><option>Age</option></select>
+        <select class="filter-select" id="qualificationFilter"><option>Qualification</option></select>
+        <select class="filter-select" id="departmentFilter"><option>Department</option></select>
+        <select class="filter-select" id="degreeFilter"><option>Degree</option></select>
+        <select class="filter-select" id="examStatusFilter"><option>Exam Status</option></select>
+        <select class="filter-select" id="experienceFilter"><option>Experience</option></select>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search for any keyword...">
     </div>
-<!-- Project Details Popup -->
-<div id="popup" class="popup">
-    <div class="popup-content">
-        <button class="close-btn project-popup-close">&times;</button>
-        <div class="popup-header project-popup-header">
-            <h2 class="country"></h2>
-            <h3 class="project-name"></h3>
-            <div class="project-status"></div>
-        </div>
-        <div class="popup-tabs project-popup-tabs">
-            <button class="project-popup-tab active" data-tab="eligibility">Eligibility Criteria</button>
-            <button class="project-popup-tab" data-tab="perks">Perks & Salary</button>
-            <button class="project-popup-tab" data-tab="procedure">Standard Procedure</button>
-            <button class="project-popup-tab" data-tab="charges">Service Charges</button>
-        </div>
-        <div id="tabContent" class="tab-content"></div>
-    </div>
-</div>
-
-
-
-
+  <div id="candidateContainer" class="candidate-table"></div>
     </div>
     </div>
 <script src="../../../../Internal-CRM/scripts.js"></script>

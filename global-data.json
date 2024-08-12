@@ -1,0 +1,582 @@
+[
+    {
+        "id": 394,
+        "name": "Kevin Sharp",
+        "display picture": "https://via.placeholder.com/50",
+        "status": "Active",
+        "gender": "Female",
+        "age": 28,
+        "passportNumber": "OA606577",
+        "mobileNumber": "421.813.8694",
+        "email": "barajasdouglas@example.com",
+        "qualification": "Master's",
+        "department": "Nursing",
+        "degree": "M.Sc Nursing",
+        "examStatus": "Passed",
+        "experience": "6 years",
+        "keywords": [
+            "whole",
+            "war"
+        ],
+        "leads": {
+            "assignedTo": "Manager Robinson",
+            "source": "Referral",
+            "leadStatus": "In Progress",
+            "dateRange": {
+                "from": "2023-09-13",
+                "to": "2025-01-21"
+            },
+            "createdBy": {
+                "name": "Recruiter Sheri",
+                "dateRange": {
+                    "from": "2023-09-16",
+                    "to": "2024-10-31"
+                }
+            }
+        },
+        "country": {
+            "origin": "Algeria",
+            "interestedCountry": "Bahamas",
+            "currentCountry": "Cuba"
+        },
+        "clients": {
+            "clientName": "Hall PLC Inc.",
+            "clientStatus": "Pending",
+            "label": "Regular"
+        },
+        "starCount": 3,
+        "noOfTimesImported": 2,
+        "others": {
+            "all": true,
+            "inCRM": true,
+            "notInCRM": false,
+            "waitingForApproval": false,
+            "inPool": true,
+            "waitingForRemoval": false,
+            "showReassignedLeads": true,
+            "excludeRejectedLeads": false
+        }
+    },
+    {
+        "id": 778,
+        "name": "Kathryn Wilson",
+        "display picture": "https://via.placeholder.com/50",
+        "status": "Active",
+        "gender": "Male",
+        "age": 37,
+        "passportNumber": "CA817153",
+        "mobileNumber": "546-305-9975",
+        "email": "stephensebony@example.org",
+        "qualification": "Diploma",
+        "department": "Nursing",
+        "degree": "Diploma in Nursing",
+        "examStatus": "Passed",
+        "experience": "8 years",
+        "keywords": [
+            "open",
+            "return"
+        ],
+        "leads": {
+            "assignedTo": "Manager Hammond",
+            "source": "Job Fair",
+            "leadStatus": "In Progress",
+            "dateRange": {
+                "from": "2023-08-16",
+                "to": "2025-05-18"
+            },
+            "createdBy": {
+                "name": "Recruiter Robert",
+                "dateRange": {
+                    "from": "2024-02-26",
+                    "to": "2025-01-22"
+                }
+            }
+        },
+        "country": {
+            "origin": "Hungary",
+            "interestedCountry": "Grenada",
+            "currentCountry": "Somalia"
+        },
+        "clients": {
+            "clientName": "Gardner, Williams and Rodriguez Inc.",
+            "clientStatus": "Ongoing",
+            "label": "Low"
+        },
+        "starCount": 5,
+        "noOfTimesImported": 4,
+        "others": {
+            "all": true,
+            "inCRM": true,
+            "notInCRM": false,
+            "waitingForApproval": false,
+            "inPool": true,
+            "waitingForRemoval": false,
+            "showReassignedLeads": true,
+            "excludeRejectedLeads": false
+        }
+    },
+    {
+        "id": 173,
+        "name": "Michele Silva",
+        "display picture": "https://via.placeholder.com/50",
+        "status": "Inactive",
+        "gender": "Male",
+        "age": 43,
+        "passportNumber": "CI738505",
+        "mobileNumber": "274.370.3294",
+        "email": "barbarahampton@example.net",
+        "qualification": "Diploma",
+        "department": "Nursing",
+        "degree": "Diploma in Nursing",
+        "examStatus": "Passed",
+        "experience": "12 years",
+        "keywords": [
+            "itself",
+            "to"
+        ],
+        "leads": {
+            "assignedTo": "Manager Wilson",
+            "source": "Job Fair",
+            "leadStatus": "In Progress",
+            "dateRange": {
+                "from": "2024-07-12",
+                "to": "2025-07-25"
+            },
+            "createdBy": {
+                "name": "Recruiter Manuel",
+                "dateRange": {
+                    "from": "2023-12-10",
+                    "to": "2025-02-15"
+                }
+            }
+        },
+        "country": {
+            "origin": "Russian Federation",
+            "interestedCountry": "Georgia",
+            "currentCountry": "Singapore"
+        },
+        "clients": {
+            "clientName": "Avila-Nelson Inc.",
+            "clientStatus": "Pending",
+            "label": "Regular"
+        },
+        "starCount": 1,
+        "noOfTimesImported": 6,
+        "others": {
+            "all": true,
+            "inCRM": true,
+            "notInCRM": false,
+            "waitingForApproval": false,
+            "inPool": true,
+            "waitingForRemoval": false,
+            "showReassignedLeads": true,
+            "excludeRejectedLeads": false
+        }
+    },
+    {
+        "id": 644,
+        "name": "Jonathan Jordan",
+        "display picture": "https://via.placeholder.com/50",
+        "status": "Inactive",
+        "gender": "Female",
+        "age": 25,
+        "passportNumber": "JY251483",
+        "mobileNumber": "6092441664",
+        "email": "sarah53@example.com",
+        "qualification": "Bachelor's",
+        "department": "Pediatrics",
+        "degree": "Diploma in Nursing",
+        "examStatus": "Passed",
+        "experience": "9 years",
+        "keywords": [
+            "wear",
+            "medical"
+        ],
+        "leads": {
+            "assignedTo": "Manager Johnson",
+            "source": "Online Portal",
+            "leadStatus": "Closed",
+            "dateRange": {
+                "from": "2023-08-25",
+                "to": "2024-12-31"
+            },
+            "createdBy": {
+                "name": "Recruiter Sarah",
+                "dateRange": {
+                    "from": "2023-12-26",
+                    "to": "2024-11-23"
+                }
+            }
+        },
+        "country": {
+            "origin": "Guinea-Bissau",
+            "interestedCountry": "Hungary",
+            "currentCountry": "Uganda"
+        },
+        "clients": {
+            "clientName": "Wagner and Sons Inc.",
+            "clientStatus": "Pending",
+            "label": "Low"
+        },
+        "starCount": 5,
+        "noOfTimesImported": 4,
+        "others": {
+            "all": true,
+            "inCRM": true,
+            "notInCRM": false,
+            "waitingForApproval": false,
+            "inPool": true,
+            "waitingForRemoval": false,
+            "showReassignedLeads": true,
+            "excludeRejectedLeads": false
+        }
+    },
+    {
+        "id": 724,
+        "name": "Jessica Ramos",
+        "display picture": "https://via.placeholder.com/50",
+        "status": "Inactive",
+        "gender": "Male",
+        "age": 22,
+        "passportNumber": "NQ130785",
+        "mobileNumber": "(663)518-8697",
+        "email": "annette66@example.com",
+        "qualification": "Master's",
+        "department": "Nursing",
+        "degree": "B.Sc Nursing",
+        "examStatus": "Passed",
+        "experience": "9 years",
+        "keywords": [
+            "night",
+            "develop"
+        ],
+        "leads": {
+            "assignedTo": "Manager Johnson",
+            "source": "Job Fair",
+            "leadStatus": "Converted",
+            "dateRange": {
+                "from": "2024-07-07",
+                "to": "2025-07-21"
+            },
+            "createdBy": {
+                "name": "Recruiter Jill",
+                "dateRange": {
+                    "from": "2023-11-26",
+                    "to": "2024-11-17"
+                }
+            }
+        },
+        "country": {
+            "origin": "Bulgaria",
+            "interestedCountry": "Tunisia",
+            "currentCountry": "Palestinian Territory"
+        },
+        "clients": {
+            "clientName": "Gillespie-Hernandez Inc.",
+            "clientStatus": "Ongoing",
+            "label": "Regular"
+        },
+        "starCount": 1,
+        "noOfTimesImported": 1,
+        "others": {
+            "all": true,
+            "inCRM": true,
+            "notInCRM": false,
+            "waitingForApproval": false,
+            "inPool": true,
+            "waitingForRemoval": false,
+            "showReassignedLeads": true,
+            "excludeRejectedLeads": false
+        }
+    },
+    {
+        "id": 261,
+        "name": "Tiffany Oneill",
+        "display picture": "https://via.placeholder.com/50",
+        "status": "Active",
+        "gender": "Female",
+        "age": 43,
+        "passportNumber": "PV962641",
+        "mobileNumber": "+1-235-510-1855x5912",
+        "email": "wesley71@example.com",
+        "qualification": "Diploma",
+        "department": "Nursing",
+        "degree": "B.Sc Nursing",
+        "examStatus": "Passed",
+        "experience": "5 years",
+        "keywords": [
+            "teacher",
+            "general"
+        ],
+        "leads": {
+            "assignedTo": "Manager Smith",
+            "source": "Referral",
+            "leadStatus": "Closed",
+            "dateRange": {
+                "from": "2024-02-10",
+                "to": "2025-01-26"
+            },
+            "createdBy": {
+                "name": "Recruiter Barbara",
+                "dateRange": {
+                    "from": "2024-05-31",
+                    "to": "2024-09-18"
+                }
+            }
+        },
+        "country": {
+            "origin": "Puerto Rico",
+            "interestedCountry": "Israel",
+            "currentCountry": "Swaziland"
+        },
+        "clients": {
+            "clientName": "Henry-Lowe Inc.",
+            "clientStatus": "Ongoing",
+            "label": "Regular"
+        },
+        "starCount": 4,
+        "noOfTimesImported": 10,
+        "others": {
+            "all": true,
+            "inCRM": true,
+            "notInCRM": false,
+            "waitingForApproval": false,
+            "inPool": true,
+            "waitingForRemoval": false,
+            "showReassignedLeads": true,
+            "excludeRejectedLeads": false
+        }
+    },
+    {
+        "id": 695,
+        "name": "Matthew Johnson",
+        "display picture": "https://via.placeholder.com/50",
+        "status": "Active",
+        "gender": "Female",
+        "age": 47,
+        "passportNumber": "IY721384",
+        "mobileNumber": "(974)984-2044",
+        "email": "greenjessica@example.net",
+        "qualification": "Diploma",
+        "department": "Pediatrics",
+        "degree": "Diploma in Nursing",
+        "examStatus": "Passed",
+        "experience": "14 years",
+        "keywords": [
+            "each",
+            "city"
+        ],
+        "leads": {
+            "assignedTo": "Manager Nguyen",
+            "source": "Online Portal",
+            "leadStatus": "In Progress",
+            "dateRange": {
+                "from": "2024-05-19",
+                "to": "2024-10-20"
+            },
+            "createdBy": {
+                "name": "Recruiter Jeffrey",
+                "dateRange": {
+                    "from": "2023-08-21",
+                    "to": "2025-05-14"
+                }
+            }
+        },
+        "country": {
+            "origin": "United Kingdom",
+            "interestedCountry": "Mexico",
+            "currentCountry": "Micronesia"
+        },
+        "clients": {
+            "clientName": "Thomas-Ramirez Inc.",
+            "clientStatus": "Completed",
+            "label": "Low"
+        },
+        "starCount": 2,
+        "noOfTimesImported": 8,
+        "others": {
+            "all": true,
+            "inCRM": true,
+            "notInCRM": false,
+            "waitingForApproval": false,
+            "inPool": true,
+            "waitingForRemoval": false,
+            "showReassignedLeads": true,
+            "excludeRejectedLeads": false
+        }
+    },
+    {
+        "id": 144,
+        "name": "Chelsey Martin",
+        "display picture": "https://via.placeholder.com/50",
+        "status": "Active",
+        "gender": "Female",
+        "age": 26,
+        "passportNumber": "YK535985",
+        "mobileNumber": "001-954-555-9117x722",
+        "email": "dunnryan@example.org",
+        "qualification": "Master's",
+        "department": "Pediatrics",
+        "degree": "Diploma in Nursing",
+        "examStatus": "Failed",
+        "experience": "6 years",
+        "keywords": [
+            "recent",
+            "stand"
+        ],
+        "leads": {
+            "assignedTo": "Manager Weber",
+            "source": "Referral",
+            "leadStatus": "Closed",
+            "dateRange": {
+                "from": "2023-09-02",
+                "to": "2025-05-08"
+            },
+            "createdBy": {
+                "name": "Recruiter Melissa",
+                "dateRange": {
+                    "from": "2023-10-26",
+                    "to": "2025-02-13"
+                }
+            }
+        },
+        "country": {
+            "origin": "Congo",
+            "interestedCountry": "Micronesia",
+            "currentCountry": "Israel"
+        },
+        "clients": {
+            "clientName": "Brown Group Inc.",
+            "clientStatus": "Ongoing",
+            "label": "Low"
+        },
+        "starCount": 2,
+        "noOfTimesImported": 1,
+        "others": {
+            "all": true,
+            "inCRM": true,
+            "notInCRM": false,
+            "waitingForApproval": false,
+            "inPool": true,
+            "waitingForRemoval": false,
+            "showReassignedLeads": true,
+            "excludeRejectedLeads": false
+        }
+    },
+    {
+        "id": 571,
+        "name": "Tiffany Snyder",
+        "display picture": "https://via.placeholder.com/50",
+        "status": "Inactive",
+        "gender": "Male",
+        "age": 48,
+        "passportNumber": "YZ683227",
+        "mobileNumber": "352.281.3464x3541",
+        "email": "michael73@example.net",
+        "qualification": "Diploma",
+        "department": "Pediatrics",
+        "degree": "M.Sc Nursing",
+        "examStatus": "Failed",
+        "experience": "3 years",
+        "keywords": [
+            "adult",
+            "east"
+        ],
+        "leads": {
+            "assignedTo": "Manager Holmes",
+            "source": "Online Portal",
+            "leadStatus": "Converted",
+            "dateRange": {
+                "from": "2024-02-23",
+                "to": "2025-05-23"
+            },
+            "createdBy": {
+                "name": "Recruiter Brian",
+                "dateRange": {
+                    "from": "2023-08-30",
+                    "to": "2025-04-24"
+                }
+            }
+        },
+        "country": {
+            "origin": "Yemen",
+            "interestedCountry": "Slovenia",
+            "currentCountry": "Micronesia"
+        },
+        "clients": {
+            "clientName": "Gomez and Sons Inc.",
+            "clientStatus": "Completed",
+            "label": "Priority"
+        },
+        "starCount": 5,
+        "noOfTimesImported": 10,
+        "others": {
+            "all": true,
+            "inCRM": true,
+            "notInCRM": false,
+            "waitingForApproval": false,
+            "inPool": true,
+            "waitingForRemoval": false,
+            "showReassignedLeads": true,
+            "excludeRejectedLeads": false
+        }
+    },
+    {
+        "id": 637,
+        "name": "Nicholas Stephens",
+        "display picture": "https://via.placeholder.com/50",
+        "status": "Active",
+        "gender": "Female",
+        "age": 58,
+        "passportNumber": "GQ410198",
+        "mobileNumber": "+1-782-401-3202x117",
+        "email": "fmarks@example.com",
+        "qualification": "Master's",
+        "department": "Pediatrics",
+        "degree": "M.Sc Nursing",
+        "examStatus": "Passed",
+        "experience": "18 years",
+        "keywords": [
+            "prevent",
+            "scene"
+        ],
+        "leads": {
+            "assignedTo": "Manager Charles",
+            "source": "Referral",
+            "leadStatus": "Converted",
+            "dateRange": {
+                "from": "2023-10-27",
+                "to": "2024-08-12"
+            },
+            "createdBy": {
+                "name": "Recruiter Sheila",
+                "dateRange": {
+                    "from": "2023-10-02",
+                    "to": "2024-11-30"
+                }
+            }
+        },
+        "country": {
+            "origin": "Ukraine",
+            "interestedCountry": "Israel",
+            "currentCountry": "American Samoa"
+        },
+        "clients": {
+            "clientName": "Russell, Vasquez and Jones Inc.",
+            "clientStatus": "Pending",
+            "label": "Low"
+        },
+        "starCount": 4,
+        "noOfTimesImported": 3,
+        "others": {
+            "all": true,
+            "inCRM": true,
+            "notInCRM": false,
+            "waitingForApproval": false,
+            "inPool": true,
+            "waitingForRemoval": false,
+            "showReassignedLeads": true,
+            "excludeRejectedLeads": false
+        }
+    }
+]

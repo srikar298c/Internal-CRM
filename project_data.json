@@ -1,558 +1,982 @@
 [
   {
     "country": "Benin",
+    "projectName": "vitae voluptatem",
+    "label": "March 2022",
+    "status": "active",
+    "activeMembers": [
+      {
+        "name": "Mason Garcia",
+        "phone": "258-649-1280"
+      },
+      {
+        "name": "Noah Martinez",
+        "phone": "419-969-3683"
+      }
+    ],
+    "createdBy": {
+      "name": "Mason Johnson",
+      "phone": "296-122-8129"
+    },
+    "eligibilityCriteria": {
+      "gender": "Female",
+      "qualification": "GNM/BSc",
+      "experience": "2+ years of Experience in any Department",
+      "exams": "Passed national board exams",
+      "age": "28 to 36 years",
+      "tattoo": "Allowed in non-visible areas"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Health insurance",
+        "Annual bonus",
+        "Free accommodation"
+      ],
+      "salary": "$12733 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$919",
+      "medical_exam_fee": "$444",
+      "visa_fee": "$1430",
+      "total_charges": "$1648"
+    }
+  },
+  {
+    "country": "Togo",
     "projectName": "velit architecto",
+    "label": "March 2022",
+    "status": "inactive",
+    "activeMembers": [
+      {
+        "name": "Sophia Davis",
+        "phone": "395-824-6968"
+      },
+      {
+        "name": "Emily Garcia",
+        "phone": "435-116-9194"
+      }
+    ],
+    "createdBy": {
+      "name": "Mason Jones",
+      "phone": "667-215-2618"
+    },
+    "eligibilityCriteria": {
+      "gender": "Female",
+      "qualification": "Medicene",
+      "experience": "1+ years of Experience in any Department",
+      "exams": "DOH eligibility or ready to convert DHA/MOH to DOH at own cost",
+      "age": "24 to 43 years",
+      "tattoo": "Not allowed"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Free accommodation",
+        "Travel allowances",
+        "Health insurance"
+      ],
+      "salary": "$28838 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$563",
+      "medical_exam_fee": "$375",
+      "visa_fee": "$1378",
+      "total_charges": "$1430"
+    }
+  },
+  {
+    "country": "Benin",
+    "projectName": "omnis quaerat",
+    "label": "March 2024",
+    "status": "active",
+    "activeMembers": [
+      {
+        "name": "Mason Miller",
+        "phone": "113-162-4092"
+      },
+      {
+        "name": "Mason Smith",
+        "phone": "338-717-9063"
+      }
+    ],
+    "createdBy": {
+      "name": "Ethan Williams",
+      "phone": "779-952-5065"
+    },
+    "eligibilityCriteria": {
+      "gender": "Male",
+      "qualification": "Nursing",
+      "experience": "5+ years of Experience in any Department",
+      "exams": "Certified by international body",
+      "age": "26 to 44 years",
+      "tattoo": "Accepted in visible parts"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Health insurance",
+        "Free accommodation",
+        "Annual bonus"
+      ],
+      "salary": "$39337 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$705",
+      "medical_exam_fee": "$376",
+      "visa_fee": "$512",
+      "total_charges": "$2838"
+    }
+  },
+  {
+    "country": "Uganda",
+    "projectName": "omnis quaerat",
     "label": "March 2024",
     "status": "active",
     "activeMembers": [
       {
         "name": "Mia Garcia",
-        "phone": "763-222-1219"
+        "phone": "511-841-4943"
       },
       {
-        "name": "Isabella Smith",
-        "phone": "164-812-2799"
+        "name": "Mason Johnson",
+        "phone": "215-893-3948"
       }
     ],
     "createdBy": {
-      "name": "Isabella Smith",
-      "phone": "164-812-2799"
+      "name": "Ethan Martinez",
+      "phone": "678-726-1060"
     },
     "eligibilityCriteria": {
       "gender": "Male",
-      "qualification": "MSc",
-      "experience": "5+ years of Experience in any Department",
-      "exams": "DOH eligibility or ready to convert DHA/MOH to DOH at own cost",
-      "age": "28 to 35 years",
-      "tattoo": "Allowed in non-visible areas"
-    }
-  },
-  {
-    "country": "Nauru",
-    "projectName": "illum architecto",
-    "label": "October 2023",
-    "status": "active",
-    "activeMembers": [
-      {
-        "name": "Sophia Smith",
-        "phone": "713-974-3207"
-      }
-    ],
-    "createdBy": {
-      "name": "Sophia Smith",
-      "phone": "713-974-3207"
-    },
-    "eligibilityCriteria": {
-      "gender": "Female",
-      "qualification": "MSc",
-      "experience": "2+ years of Experience in any Department",
-      "exams": "IELTS score of 7.0 or above",
-      "age": "28 to 46 years",
-      "tattoo": "Allowed in non-visible areas"
-    }
-  },
-  {
-    "country": "Nigeria",
-    "projectName": "fugit architecto",
-    "label": "October 2023",
-    "status": "active",
-    "activeMembers": [
-      {
-        "name": "Ava Davis",
-        "phone": "169-398-1467"
-      },
-      {
-        "name": "Lila Smith",
-        "phone": "849-804-5896"
-      },
-      {
-        "name": "Lila Brown",
-        "phone": "323-823-2430"
-      }
-    ],
-    "createdBy": {
-      "name": "Ava Davis",
-      "phone": "169-398-1467"
-    },
-    "eligibilityCriteria": {
-      "gender": "Male",
-      "qualification": "MSc",
-      "experience": "5+ years of Experience in any Department",
-      "exams": "IELTS score of 7.0 or above",
-      "age": "27 to 36 years",
-      "tattoo": "Allowed in non-visible areas"
-    }
-  },
-  {
-    "country": "Nigeria",
-    "projectName": "odit atque",
-    "label": "February 2024",
-    "status": "inactive",
-    "activeMembers": [
-      {
-        "name": "Mia Effertz",
-        "phone": "621-640-1159"
-      },
-      {
-        "name": "Sophia Miller",
-        "phone": "533-687-8415"
-      }
-    ],
-    "createdBy": {
-      "name": "Sophia Miller",
-      "phone": "533-687-8415"
-    },
-    "eligibilityCriteria": {
-      "gender": "Male",
-      "qualification": "MSc",
+      "qualification": "Diploma",
       "experience": "1+ years of Experience in any Department",
-      "exams": "TOEFL score of 100 or above",
-      "age": "20 to 49 years",
-      "tattoo": "Allowed in non-visible areas"
-    }
-  },
-  {
-    "country": "Morocco",
-    "projectName": "velit qui",
-    "label": "January 2024",
-    "status": "active",
-    "activeMembers": [
-      {
-        "name": "Charlotte Effertz",
-        "phone": "497-502-6087"
-      },
-      {
-        "name": "Olivia Smith",
-        "phone": "638-826-6993"
-      }
-    ],
-    "createdBy": {
-      "name": "Olivia Smith",
-      "phone": "638-826-6993"
-    },
-    "eligibilityCriteria": {
-      "gender": "Female",
-      "qualification": "PhD",
-      "experience": "5+ years of Experience in any Department",
-      "exams": "TOEFL score of 100 or above",
-      "age": "23 to 35 years",
-      "tattoo": "Not allowed"
-    }
-  },
-  {
-    "country": "Micronesia",
-    "projectName": "velit atque",
-    "label": "March 2024",
-    "status": "active",
-    "activeMembers": [
-      {
-        "name": "Mia Effertz",
-        "phone": "715-936-6472"
-      },
-      {
-        "name": "Olivia Garcia",
-        "phone": "381-594-5694"
-      }
-    ],
-    "createdBy": {
-      "name": "Mia Effertz",
-      "phone": "715-936-6472"
-    },
-    "eligibilityCriteria": {
-      "gender": "Female",
-      "qualification": "MD",
-      "experience": "3+ years of Experience in any Department",
       "exams": "DOH eligibility or ready to convert DHA/MOH to DOH at own cost",
-      "age": "23 to 42 years",
-      "tattoo": "Allowed in non-visible areas"
-    }
-  },
-  {
-    "country": "Kenya",
-    "projectName": "recusandae placeat",
-    "label": "May 2024",
-    "status": "active",
-    "activeMembers": [
-      {
-        "name": "Emma Brown",
-        "phone": "194-961-2947"
-      }
-    ],
-    "createdBy": {
-      "name": "Emma Brown",
-      "phone": "194-961-2947"
+      "age": "33 to 38 years",
+      "tattoo": "Accepted in visible parts"
     },
-    "eligibilityCriteria": {
-      "gender": "Female",
-      "qualification": "MSc",
-      "experience": "1+ years of Experience in any Department",
-      "exams": "IELTS score of 7.0 or above",
-      "age": "28 to 40 years",
-      "tattoo": "Allowed in non-visible areas"
-    }
-  },
-  {
-    "country": "Egypt",
-    "projectName": "quos delectus",
-    "label": "September 2023",
-    "status": "active",
-    "activeMembers": [
-      {
-        "name": "Isabella Effertz",
-        "phone": "755-741-9052"
-      },
-      {
-        "name": "Emma Brown",
-        "phone": "813-418-5924"
-      },
-      {
-        "name": "Ava Garcia",
-        "phone": "912-500-1998"
-      }
-    ],
-    "createdBy": {
-      "name": "Ava Garcia",
-      "phone": "912-500-1998"
+    "perksAndSalary": {
+      "perks": [
+        "Annual bonus",
+        "Health insurance",
+        "Travel allowances"
+      ],
+      "salary": "$26437 per year"
     },
-    "eligibilityCriteria": {
-      "gender": "Female",
-      "qualification": "PhD",
-      "experience": "3+ years of Experience in any Department",
-      "exams": "IELTS score of 7.0 or above",
-      "age": "29 to 48 years",
-      "tattoo": "Accepted in visible parts also"
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$493",
+      "medical_exam_fee": "$330",
+      "visa_fee": "$1203",
+      "total_charges": "$1618"
     }
   },
   {
-    "country": "Zambia",
-    "projectName": "cupiditate porro",
-    "label": "October 2023",
+    "country": "Senegal",
+    "projectName": "et quos cupiditate",
+    "label": "March 2022",
     "status": "inactive",
     "activeMembers": [
       {
-        "name": "Sophia Williams",
-        "phone": "829-794-7414"
+        "name": "Emily Miller",
+        "phone": "654-807-8785"
       },
       {
-        "name": "Sophia Williams",
-        "phone": "197-209-8941"
+        "name": "Olivia Brown",
+        "phone": "124-561-8076"
       }
     ],
     "createdBy": {
-      "name": "Sophia Williams",
-      "phone": "197-209-8941"
+      "name": "Emily Davis",
+      "phone": "214-927-9063"
     },
     "eligibilityCriteria": {
       "gender": "Female",
-      "qualification": "MSc",
-      "experience": "3+ years of Experience in any Department",
-      "exams": "IELTS score of 7.0 or above",
-      "age": "30 to 44 years",
-      "tattoo": "Not allowed"
-    }
-  },
-  {
-    "country": "Micronesia",
-    "projectName": "ipsam sed",
-    "label": "May 2024",
-    "status": "active",
-    "activeMembers": [
-      {
-        "name": "Charlotte Smith",
-        "phone": "952-307-7374"
-      },
-      {
-        "name": "Isabella Bogisich",
-        "phone": "270-902-1694"
-      }
-    ],
-    "createdBy": {
-      "name": "Isabella Bogisich",
-      "phone": "270-902-1694"
-    },
-    "eligibilityCriteria": {
-      "gender": "Male",
-      "qualification": "MD",
+      "qualification": "GNM/BSc",
       "experience": "2+ years of Experience in any Department",
-      "exams": "TOEFL score of 100 or above",
-      "age": "21 to 49 years",
-      "tattoo": "Accepted in visible parts also"
-    }
-  },
-  {
-    "country": "Kenya",
-    "projectName": "non architecto",
-    "label": "November 2023",
-    "status": "active",
-    "activeMembers": [
-      {
-        "name": "Isabella Williams",
-        "phone": "278-409-8721"
-      }
-    ],
-    "createdBy": {
-      "name": "Isabella Williams",
-      "phone": "278-409-8721"
-    },
-    "eligibilityCriteria": {
-      "gender": "Any",
-      "qualification": "PhD",
-      "experience": "5+ years of Experience in any Department",
       "exams": "DOH eligibility or ready to convert DHA/MOH to DOH at own cost",
-      "age": "22 to 45 years",
+      "age": "23 to 41 years",
       "tattoo": "Not allowed"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Paid vacation",
+        "Annual bonus",
+        "Travel allowances"
+      ],
+      "salary": "$31483 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$154",
+      "medical_exam_fee": "$406",
+      "visa_fee": "$1088",
+      "total_charges": "$1007"
     }
   },
   {
-    "country": "Kenya",
-    "projectName": "cupiditate qui",
-    "label": "May 2024",
+    "country": "Uganda",
+    "projectName": "omnis quaerat",
+    "label": "March 2023",
     "status": "inactive",
     "activeMembers": [
       {
-        "name": "Sophia Bogisich",
-        "phone": "144-917-2300"
+        "name": "Olivia Miller",
+        "phone": "147-157-5804"
       },
       {
-        "name": "Isabella Williams",
-        "phone": "154-549-1655"
-      },
-      {
-        "name": "Lila Miller",
-        "phone": "714-313-9900"
+        "name": "Sophia Hernandez",
+        "phone": "696-876-1788"
       }
     ],
     "createdBy": {
-      "name": "Sophia Bogisich",
-      "phone": "144-917-2300"
+      "name": "Emily Smith",
+      "phone": "641-382-2731"
     },
     "eligibilityCriteria": {
       "gender": "Male",
       "qualification": "GNM/BSc",
       "experience": "5+ years of Experience in any Department",
-      "exams": "IELTS score of 7.0 or above",
-      "age": "30 to 47 years",
-      "tattoo": "Allowed in non-visible areas"
+      "exams": "Passed national board exams",
+      "age": "25 to 39 years",
+      "tattoo": "Accepted in visible parts"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Health insurance",
+        "Paid vacation",
+        "Travel allowances"
+      ],
+      "salary": "$24977 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$180",
+      "medical_exam_fee": "$206",
+      "visa_fee": "$675",
+      "total_charges": "$1120"
     }
   },
   {
-    "country": "Kenya",
-    "projectName": "recusandae et",
-    "label": "January 2024",
-    "status": "active",
+    "country": "Uganda",
+    "projectName": "et quos cupiditate",
+    "label": "March 2022",
+    "status": "inactive",
     "activeMembers": [
       {
-        "name": "Ava Williams",
-        "phone": "975-925-3416"
+        "name": "Liam Martinez",
+        "phone": "626-230-3756"
       },
       {
-        "name": "Lila Davis",
-        "phone": "678-868-1611"
-      },
-      {
-        "name": "Lila Williams",
-        "phone": "794-861-4081"
+        "name": "Ethan Jones",
+        "phone": "399-669-6099"
       }
     ],
     "createdBy": {
-      "name": "Ava Williams",
-      "phone": "975-925-3416"
+      "name": "Mia Miller",
+      "phone": "359-497-2027"
     },
     "eligibilityCriteria": {
-      "gender": "Any",
-      "qualification": "MD",
-      "experience": "4+ years of Experience in any Department",
-      "exams": "IELTS score of 7.0 or above",
-      "age": "25 to 38 years",
-      "tattoo": "Accepted in visible parts also"
+      "gender": "Male",
+      "qualification": "GNM/BSc",
+      "experience": "1+ years of Experience in any Department",
+      "exams": "Passed national board exams",
+      "age": "24 to 37 years",
+      "tattoo": "Not allowed"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Travel allowances",
+        "Annual bonus",
+        "Free accommodation"
+      ],
+      "salary": "$14275 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$678",
+      "medical_exam_fee": "$218",
+      "visa_fee": "$725",
+      "total_charges": "$1933"
+    }
+  },
+  {
+    "country": "Ethiopia",
+    "projectName": "omnis quaerat",
+    "label": "March 2023",
+    "status": "inactive",
+    "activeMembers": [
+      {
+        "name": "Lucas Davis",
+        "phone": "857-584-8011"
+      },
+      {
+        "name": "Liam Miller",
+        "phone": "533-348-6478"
+      }
+    ],
+    "createdBy": {
+      "name": "Lucas Williams",
+      "phone": "145-768-2272"
+    },
+    "eligibilityCriteria": {
+      "gender": "Female",
+      "qualification": "Medicene",
+      "experience": "1+ years of Experience in any Department",
+      "exams": "DOH eligibility or ready to convert DHA/MOH to DOH at own cost",
+      "age": "25 to 43 years",
+      "tattoo": "Not allowed"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Travel allowances",
+        "Paid vacation",
+        "Free accommodation"
+      ],
+      "salary": "$26583 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$779",
+      "medical_exam_fee": "$294",
+      "visa_fee": "$1387",
+      "total_charges": "$2957"
     }
   },
   {
     "country": "Nigeria",
-    "projectName": "illum delectus",
-    "label": "June 2024",
+    "projectName": "vitae voluptatem",
+    "label": "March 2023",
     "status": "active",
     "activeMembers": [
       {
-        "name": "Mia Bogisich",
-        "phone": "771-503-3801"
+        "name": "Olivia Martinez",
+        "phone": "238-672-8306"
+      },
+      {
+        "name": "Noah Martinez",
+        "phone": "379-548-9417"
       }
     ],
     "createdBy": {
-      "name": "Mia Bogisich",
-      "phone": "771-503-3801"
-    },
-    "eligibilityCriteria": {
-      "gender": "Any",
-      "qualification": "PhD",
-      "experience": "4+ years of Experience in any Department",
-      "exams": "DOH eligibility or ready to convert DHA/MOH to DOH at own cost",
-      "age": "22 to 42 years",
-      "tattoo": "Accepted in visible parts also"
-    }
-  },
-  {
-    "country": "Benin",
-    "projectName": "molestiae porro",
-    "label": "December 2023",
-    "status": "inactive",
-    "activeMembers": [
-      {
-        "name": "Nina Davis",
-        "phone": "487-117-1255"
-      },
-      {
-        "name": "Mia Williams",
-        "phone": "207-825-4033"
-      },
-      {
-        "name": "Nina Johnson",
-        "phone": "556-108-2683"
-      }
-    ],
-    "createdBy": {
-      "name": "Nina Johnson",
-      "phone": "556-108-2683"
+      "name": "Emily Johnson",
+      "phone": "430-811-4257"
     },
     "eligibilityCriteria": {
       "gender": "Female",
-      "qualification": "MD",
+      "qualification": "Diploma",
+      "experience": "10+ years of Experience in any Department",
+      "exams": "Passed national board exams",
+      "age": "28 to 41 years",
+      "tattoo": "Not allowed"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Health insurance",
+        "Free accommodation",
+        "Travel allowances"
+      ],
+      "salary": "$15054 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$355",
+      "medical_exam_fee": "$309",
+      "visa_fee": "$1527",
+      "total_charges": "$2759"
+    }
+  },
+  {
+    "country": "Uganda",
+    "projectName": "omnis quaerat",
+    "label": "March 2025",
+    "status": "inactive",
+    "activeMembers": [
+      {
+        "name": "Noah Johnson",
+        "phone": "693-918-6568"
+      },
+      {
+        "name": "Olivia Garcia",
+        "phone": "361-973-5430"
+      }
+    ],
+    "createdBy": {
+      "name": "Olivia Martinez",
+      "phone": "826-525-9362"
+    },
+    "eligibilityCriteria": {
+      "gender": "Male",
+      "qualification": "Medicene",
       "experience": "2+ years of Experience in any Department",
-      "exams": "DOH eligibility or ready to convert DHA/MOH to DOH at own cost",
-      "age": "20 to 39 years",
-      "tattoo": "Accepted in visible parts also"
+      "exams": "Passed national board exams",
+      "age": "34 to 36 years",
+      "tattoo": "Not allowed"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Annual bonus",
+        "Free accommodation",
+        "Paid vacation"
+      ],
+      "salary": "$26367 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$807",
+      "medical_exam_fee": "$166",
+      "visa_fee": "$574",
+      "total_charges": "$2179"
     }
   },
   {
-    "country": "Nauru",
-    "projectName": "recusandae atque",
-    "label": "November 2023",
+    "country": "Uganda",
+    "projectName": "et quos cupiditate",
+    "label": "March 2023",
     "status": "inactive",
     "activeMembers": [
       {
-        "name": "Lila Williams",
-        "phone": "625-159-8391"
+        "name": "Emily Davis",
+        "phone": "350-165-4689"
+      },
+      {
+        "name": "Noah Johnson",
+        "phone": "557-857-9194"
       }
     ],
     "createdBy": {
-      "name": "Lila Williams",
-      "phone": "625-159-8391"
+      "name": "Mia Martinez",
+      "phone": "389-778-1222"
     },
     "eligibilityCriteria": {
       "gender": "Female",
-      "qualification": "PhD",
+      "qualification": "GNM/BSc",
+      "experience": "1+ years of Experience in any Department",
+      "exams": "Passed national board exams",
+      "age": "31 to 40 years",
+      "tattoo": "Not allowed"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Paid vacation",
+        "Travel allowances",
+        "Free accommodation"
+      ],
+      "salary": "$20440 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$334",
+      "medical_exam_fee": "$288",
+      "visa_fee": "$587",
+      "total_charges": "$2652"
+    }
+  },
+  {
+    "country": "Cameroon",
+    "projectName": "velit architecto",
+    "label": "March 2024",
+    "status": "inactive",
+    "activeMembers": [
+      {
+        "name": "Mia Johnson",
+        "phone": "965-920-2326"
+      },
+      {
+        "name": "Liam Hernandez",
+        "phone": "562-817-5075"
+      }
+    ],
+    "createdBy": {
+      "name": "Mia Johnson",
+      "phone": "529-121-2092"
+    },
+    "eligibilityCriteria": {
+      "gender": "Male",
+      "qualification": "Medicene",
+      "experience": "10+ years of Experience in any Department",
+      "exams": "DOH eligibility or ready to convert DHA/MOH to DOH at own cost",
+      "age": "34 to 43 years",
+      "tattoo": "Allowed in non-visible areas"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Health insurance",
+        "Paid vacation",
+        "Free accommodation"
+      ],
+      "salary": "$33803 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$313",
+      "medical_exam_fee": "$278",
+      "visa_fee": "$1330",
+      "total_charges": "$2211"
+    }
+  },
+  {
+    "country": "Togo",
+    "projectName": "vitae voluptatem",
+    "label": "March 2025",
+    "status": "inactive",
+    "activeMembers": [
+      {
+        "name": "Liam Garcia",
+        "phone": "924-762-8369"
+      },
+      {
+        "name": "Emily Martinez",
+        "phone": "350-669-6216"
+      }
+    ],
+    "createdBy": {
+      "name": "Noah Brown",
+      "phone": "492-595-2210"
+    },
+    "eligibilityCriteria": {
+      "gender": "Male",
+      "qualification": "Nursing",
+      "experience": "10+ years of Experience in any Department",
+      "exams": "Passed national board exams",
+      "age": "23 to 39 years",
+      "tattoo": "Allowed in non-visible areas"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Travel allowances",
+        "Free accommodation",
+        "Paid vacation"
+      ],
+      "salary": "$27655 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$106",
+      "medical_exam_fee": "$298",
+      "visa_fee": "$1816",
+      "total_charges": "$1698"
+    }
+  },
+  {
+    "country": "Gabon",
+    "projectName": "et quos cupiditate",
+    "label": "March 2024",
+    "status": "inactive",
+    "activeMembers": [
+      {
+        "name": "Ethan Davis",
+        "phone": "655-109-4645"
+      },
+      {
+        "name": "Mia Martinez",
+        "phone": "116-797-2492"
+      }
+    ],
+    "createdBy": {
+      "name": "Lucas Miller",
+      "phone": "816-925-4719"
+    },
+    "eligibilityCriteria": {
+      "gender": "Male",
+      "qualification": "GNM/BSc",
+      "experience": "2+ years of Experience in any Department",
+      "exams": "Passed national board exams",
+      "age": "32 to 43 years",
+      "tattoo": "Accepted in visible parts"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Health insurance",
+        "Travel allowances",
+        "Annual bonus"
+      ],
+      "salary": "$16500 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$935",
+      "medical_exam_fee": "$342",
+      "visa_fee": "$1687",
+      "total_charges": "$1563"
+    }
+  },
+  {
+    "country": "Cameroon",
+    "projectName": "velit architecto",
+    "label": "March 2023",
+    "status": "inactive",
+    "activeMembers": [
+      {
+        "name": "Olivia Miller",
+        "phone": "815-761-7445"
+      },
+      {
+        "name": "Ethan Garcia",
+        "phone": "237-651-1862"
+      }
+    ],
+    "createdBy": {
+      "name": "Liam Jones",
+      "phone": "944-947-3267"
+    },
+    "eligibilityCriteria": {
+      "gender": "Male",
+      "qualification": "Diploma",
+      "experience": "2+ years of Experience in any Department",
+      "exams": "Passed national board exams",
+      "age": "24 to 40 years",
+      "tattoo": "Not allowed"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Health insurance",
+        "Free accommodation",
+        "Travel allowances"
+      ],
+      "salary": "$18237 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$143",
+      "medical_exam_fee": "$359",
+      "visa_fee": "$863",
+      "total_charges": "$2344"
+    }
+  },
+  {
+    "country": "Uganda",
+    "projectName": "dolores animi",
+    "label": "March 2022",
+    "status": "active",
+    "activeMembers": [
+      {
+        "name": "Lucas Martinez",
+        "phone": "151-931-9360"
+      },
+      {
+        "name": "Ethan Martinez",
+        "phone": "644-886-8843"
+      }
+    ],
+    "createdBy": {
+      "name": "Emily Davis",
+      "phone": "351-120-3673"
+    },
+    "eligibilityCriteria": {
+      "gender": "Female",
+      "qualification": "GNM/BSc",
       "experience": "5+ years of Experience in any Department",
       "exams": "DOH eligibility or ready to convert DHA/MOH to DOH at own cost",
-      "age": "26 to 47 years",
+      "age": "23 to 41 years",
       "tattoo": "Allowed in non-visible areas"
-    }
-  },
-  {
-    "country": "South Africa",
-    "projectName": "fugit porro",
-    "label": "April 2024",
-    "status": "inactive",
-    "activeMembers": [
-      {
-        "name": "Lila Davis",
-        "phone": "409-620-4023"
-      },
-      {
-        "name": "Sophia Garcia",
-        "phone": "517-490-2875"
-      }
-    ],
-    "createdBy": {
-      "name": "Sophia Garcia",
-      "phone": "517-490-2875"
     },
-    "eligibilityCriteria": {
-      "gender": "Male",
-      "qualification": "MD",
-      "experience": "3+ years of Experience in any Department",
-      "exams": "DOH eligibility or ready to convert DHA/MOH to DOH at own cost",
-      "age": "29 to 42 years",
-      "tattoo": "Accepted in visible parts also"
-    }
-  },
-  {
-    "country": "Egypt",
-    "projectName": "cupiditate delectus",
-    "label": "September 2023",
-    "status": "inactive",
-    "activeMembers": [
-      {
-        "name": "Mia Miller",
-        "phone": "261-961-1457"
-      },
-      {
-        "name": "Olivia Bogisich",
-        "phone": "805-644-3637"
-      }
-    ],
-    "createdBy": {
-      "name": "Olivia Bogisich",
-      "phone": "805-644-3637"
+    "perksAndSalary": {
+      "perks": [
+        "Free accommodation",
+        "Travel allowances",
+        "Annual bonus"
+      ],
+      "salary": "$25319 per year"
     },
-    "eligibilityCriteria": {
-      "gender": "Male",
-      "qualification": "MSc",
-      "experience": "2+ years of Experience in any Department",
-      "exams": "IELTS score of 7.0 or above",
-      "age": "21 to 35 years",
-      "tattoo": "Accepted in visible parts also"
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$680",
+      "medical_exam_fee": "$399",
+      "visa_fee": "$1572",
+      "total_charges": "$2015"
     }
   },
   {
-    "country": "Iran",
-    "projectName": "cupiditate et",
-    "label": "April 2024",
-    "status": "inactive",
+    "country": "Ethiopia",
+    "projectName": "vitae voluptatem",
+    "label": "March 2024",
+    "status": "active",
     "activeMembers": [
       {
-        "name": "Lila Johnson",
-        "phone": "268-978-2782"
+        "name": "Noah Davis",
+        "phone": "894-839-4003"
       },
       {
-        "name": "Sophia Jones",
-        "phone": "242-541-5688"
+        "name": "Lucas Jones",
+        "phone": "433-366-5324"
       }
     ],
     "createdBy": {
       "name": "Sophia Jones",
-      "phone": "242-541-5688"
+      "phone": "990-709-2591"
     },
     "eligibilityCriteria": {
-      "gender": "Any",
-      "qualification": "PhD",
-      "experience": "5+ years of Experience in any Department",
-      "exams": "IELTS score of 7.0 or above",
-      "age": "25 to 45 years",
-      "tattoo": "Not allowed"
+      "gender": "Male",
+      "qualification": "Diploma",
+      "experience": "10+ years of Experience in any Department",
+      "exams": "Certified by international body",
+      "age": "33 to 42 years",
+      "tattoo": "Accepted in visible parts"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Health insurance",
+        "Annual bonus",
+        "Travel allowances"
+      ],
+      "salary": "$34007 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$715",
+      "medical_exam_fee": "$359",
+      "visa_fee": "$1080",
+      "total_charges": "$2662"
     }
   },
   {
-    "country": "Iran",
-    "projectName": "recusandae sed",
-    "label": "April 2024",
+    "country": "Djibouti",
+    "projectName": "velit architecto",
+    "label": "March 2022",
     "status": "active",
     "activeMembers": [
       {
-        "name": "Nina Williams",
-        "phone": "737-659-9649"
+        "name": "Lucas Davis",
+        "phone": "300-646-5817"
+      },
+      {
+        "name": "Mason Brown",
+        "phone": "682-623-6096"
       }
     ],
     "createdBy": {
-      "name": "Nina Williams",
-      "phone": "737-659-9649"
+      "name": "Mason Miller",
+      "phone": "571-489-2458"
     },
     "eligibilityCriteria": {
       "gender": "Female",
-      "qualification": "MD",
-      "experience": "4+ years of Experience in any Department",
-      "exams": "DOH eligibility or ready to convert DHA/MOH to DOH at own cost",
-      "age": "29 to 41 years",
+      "qualification": "Diploma",
+      "experience": "1+ years of Experience in any Department",
+      "exams": "Certified by international body",
+      "age": "27 to 40 years",
       "tattoo": "Not allowed"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Health insurance",
+        "Travel allowances",
+        "Free accommodation"
+      ],
+      "salary": "$13614 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$305",
+      "medical_exam_fee": "$146",
+      "visa_fee": "$915",
+      "total_charges": "$2384"
+    }
+  },
+  {
+    "country": "Benin",
+    "projectName": "omnis quaerat",
+    "label": "March 2022",
+    "status": "active",
+    "activeMembers": [
+      {
+        "name": "Sophia Martinez",
+        "phone": "812-881-2364"
+      },
+      {
+        "name": "Lucas Martinez",
+        "phone": "640-209-5606"
+      }
+    ],
+    "createdBy": {
+      "name": "Ethan Martinez",
+      "phone": "733-431-3512"
+    },
+    "eligibilityCriteria": {
+      "gender": "Male",
+      "qualification": "GNM/BSc",
+      "experience": "10+ years of Experience in any Department",
+      "exams": "DOH eligibility or ready to convert DHA/MOH to DOH at own cost",
+      "age": "34 to 41 years",
+      "tattoo": "Allowed in non-visible areas"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Travel allowances",
+        "Paid vacation",
+        "Health insurance"
+      ],
+      "salary": "$16725 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$828",
+      "medical_exam_fee": "$212",
+      "visa_fee": "$1652",
+      "total_charges": "$1546"
+    }
+  },
+  {
+    "country": "Cameroon",
+    "projectName": "vitae voluptatem",
+    "label": "March 2024",
+    "status": "active",
+    "activeMembers": [
+      {
+        "name": "Noah Miller",
+        "phone": "310-698-8428"
+      },
+      {
+        "name": "Sophia Martinez",
+        "phone": "313-720-4235"
+      }
+    ],
+    "createdBy": {
+      "name": "Lucas Brown",
+      "phone": "321-300-8041"
+    },
+    "eligibilityCriteria": {
+      "gender": "Female",
+      "qualification": "Medicene",
+      "experience": "5+ years of Experience in any Department",
+      "exams": "Passed national board exams",
+      "age": "29 to 39 years",
+      "tattoo": "Not allowed"
+    },
+    "perksAndSalary": {
+      "perks": [
+        "Annual bonus",
+        "Health insurance",
+        "Free accommodation"
+      ],
+      "salary": "$18316 per year"
+    },
+    "standardProcedure": [
+      "Step 1: Submit application",
+      "Step 2: Attend interview",
+      "Step 3: Pass medical exam",
+      "Step 4: Sign contract",
+      "Step 5: Report to duty"
+    ],
+    "serviceCharges": {
+      "processing_fee": "$831",
+      "medical_exam_fee": "$286",
+      "visa_fee": "$614",
+      "total_charges": "$1346"
     }
   }
 ]
