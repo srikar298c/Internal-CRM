@@ -850,82 +850,197 @@ tbody tr svg{
     border-bottom-right-radius: 4px;
   }
 }
-.filter-section {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  border: 1px solid black;
-  padding: 5px;
-  border-radius: 10px;
-  background-color: white;
-}
+ .filter-section {
+   display: flex;
+   gap: 10px;
+   margin-bottom: 20px;
+   flex-wrap: wrap;
+ }
 
-.filter-button,
-.filter-select,
-.search-input {
-  background-color: #f1eeee;
-  color: #000;
-  border: 1px solid #555;
-  padding: 8px 12px;
-  border-radius: 4px;
-}
+ .filter-button,
+ .filter-select,
+ .search-input {
+   background-color: #f0f0f0;
+   color: #333;
+   border: 1px solid #ccc;
+   padding: 8px 12px;
+   border-radius: 4px;
+   transition: background-color 0.3s ease, color 0.3s ease;
+ }
 
-.filter-button {
-  cursor: pointer;
-}
+ .filter-button {
+   cursor: pointer;
+ }
 
-.filter-count {
-  background-color: #4CAF50;
-  color: white;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 0.8em;
-  margin-left: 5px;
-}
+ .filter-button:hover {
+   background-color: #e0e0e0;
+ }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  
-}
+ .filter-count {
+   background-color: #007bff;
+   color: white;
+   border-radius: 50%;
+   padding: 2px 6px;
+   font-size: 0.8em;
+   margin-left: 5px;
+ }
 
-th,
-td {
-  border: 1px solid #555;
-  padding: 10px;
-  text-align: left;
-  
-}
+ .candidate-table {
+   width: 100%;
+ }
 
-th {
-  background-color: #f1eeee;
-}
+ .leads-candidate-data {
+   background-color: #fff;
+   margin-bottom: 10px;
+   border-radius: 8px;
+   overflow: hidden;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   transition: box-shadow 0.3s ease;
+ }
 
-.leads-candidate-data {
-  background-color: #2a2a2a;
-}
+ .leads-candidate-data:hover {
+   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+ }
 
-.candidate-image {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
+ .candidate-summary {
+   display: flex;
+   align-items: center;
+   padding: 15px;
+   cursor: pointer;
+   justify-content: space-around;
+   transition: background-color 0.3s ease;
+ }
 
-.status-select {
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #555;
-  padding: 5px;
-  border-radius: 4px;
-}
+ .candidate-summary:hover {
+   background-color: #f9f9f9;
+ }
 
-.action-dots {
-  cursor: pointer;
-}
+ .checkbox {
+   margin-right: 15px;
+ }
 
-.additional-info {
-  display: none;
-  padding: 10px;
-  background-color: #3a3a3a;
-}
+ .candidate-image {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   margin-right: 15px;
+ }
+
+ .candidate-info {
+   flex-grow: 1;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .candidate-main-info {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+ }
+
+ .candidate-id {
+   font-size: 0.8em;
+   color: #999;
+ }
+
+ .candidate-name {
+   font-weight: bold;
+   color: #333;
+ }
+
+ .candidate-contact {
+   font-size: 0.9em;
+   color: #666;
+ }
+
+ .candidate-details {
+   display: flex;
+   gap: 20px;
+ }
+
+ .status-select {
+   background-color: #f0f0f0;
+   color: #333;
+   border: 1px solid #ccc;
+   padding: 5px;
+   border-radius: 4px;
+   transition: background-color 0.3s ease;
+ }
+
+ .status-select:hover {
+   background-color: #e0e0e0;
+ }
+
+ .action-dots {
+   font-size: 1.5em;
+   cursor: pointer;
+   color: #999;
+ }
+
+ .caret-icon {
+   font-size: 1.2em;
+   transition: transform 0.3s ease;
+   cursor: pointer;
+   margin-left: 15px;
+   color: #999;
+ }
+
+ .caret-icon.open {
+   transform: rotate(180deg);
+ }
+
+ .additional-info {
+   display: none;
+   padding: 15px;
+   border-top: 1px solid #eee;
+   background-color: #fafafa;
+ }
+
+ .additional-info.open {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+ }
+
+ .info-group {
+   margin-bottom: 10px;
+ }
+
+ .info-label {
+   font-weight: bold;
+   color: #333;
+   margin-right: 5px;
+ }
+
+ .button-group {
+   
+ }
+
+ .icon-button {
+   background: none;
+   border: none;
+   cursor: pointer;
+   margin-right: 10px;
+   color: #007bff;
+   font-size: 1.2em;
+   transition: color 0.3s ease;
+ }
+
+ .icon-button:hover {
+   color: #0056b3;
+ }
+
+ .submit-button {
+   background-color: #007bff;
+   color: white;
+   padding: 10px 15px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+ }
+
+ .submit-button:hover {
+   background-color: #0056b3;
+ }
