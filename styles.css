@@ -98,7 +98,9 @@ body {
 .sidebar-nav ul li {
   margin-bottom: 10px;
 }
-
+.sidebar-nav-item{
+  width: 130px;
+}
 .sidebar-nav a {
   display: flex;
   align-items: center;
@@ -131,10 +133,6 @@ body {
   background-color: white;
   color: #006b77;
   border-radius: 5px;
-}
-
-.section-1 ul li {
-  padding-bottom: 3px;
 }
 
 .dropdown {
@@ -183,7 +181,7 @@ body {
 .arrow-icon {
   width: 10px;
   height: 20px;
-  margin-left: 25px;
+  margin-left: 5px;
   vertical-align: middle;
 }
 
@@ -700,7 +698,7 @@ tbody tr svg {
 .label-date {
   font-size: 14px;
 }
-
+/* ********************************PROJECTS POPUP ***********************/
 .popup {
   display: none;
   position: fixed;
@@ -821,12 +819,16 @@ tbody tr svg {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.5rem;
+  border: 1px groove var(--boxshadow-edge);
+  border-radius: 12px;
+  padding: 2px;
 }
 
 .project-popup-tab {
   background-color: #f0f0f0;
-  border: none;
   padding: 0.75rem 1rem;
+  border: none;
+
   cursor: pointer;
   flex-grow: 1;
   text-align: center;
@@ -842,6 +844,7 @@ tbody tr svg {
 }
 
 .project-popup-tab:first-child {
+  
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
@@ -852,8 +855,9 @@ tbody tr svg {
 }
 
 .project-popup-tab.active {
-  background-color: #007BFF;
+  background-color: var(--primary-color);
   color: white;
+  border-radius: 10px;
 }
 
 .tab-content {
@@ -932,42 +936,176 @@ tbody tr svg {
     border-bottom-right-radius: 4px;
   }
 }
-
+/* ************************ Global Database ***************************/
 .filter-section {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+ padding:10px ;
+ border: 1px solid var(--boxshadow-edge);
+ border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+ box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.filter-button,
-.filter-select,
+/* .filter-button, */
+.filter-select  {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  border-radius: 8px;
+  width: 110px;
+  font-size: 10px;
+  font-weight:bolder;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 .search-input {
   background-color: #f0f0f0;
   color: #333;
   border: 1px solid #ccc;
-  padding: 8px 12px;
-  border-radius: 4px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight:bolder;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-.filter-button {
+.advanced-filter-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.filter-button:hover {
-  background-color: #e0e0e0;
+.advanced-filter-button:hover {
+  background-color: var(--secondary-color);
 }
 
 .filter-count {
-  background-color: #007bff;
-  color: white;
+  background-color: white;
+  color: var(--primary-color);
   border-radius: 50%;
   padding: 2px 6px;
-  font-size: 0.8em;
   margin-left: 5px;
+  font-size: 10px;
+}
+.advanced-popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+width: 100%;
+  height: 100%; 
+   background: rgba(0, 0, 0, 0.5);
+}
+.advanced-popup-container {
+  position: relative;
+  top: 19%;
+  left: 20%;
+  transform: translateY(10px);
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 40%;
+}
+.advanced-filter-popup {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
 }
 
+.advanced-filter-popup-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px 15px 0px;
+  background-color: #005f73;
+  color: white;
+  border-radius: 8px 8px 0 0;
+  align-items: center;
+}
+
+.advanced-filter-popup-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.advanced-close-popup {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.advanced-close-popup:hover {
+  color: #ddd;
+}
+
+.advanced-filter-popup-content {
+  display: flex;
+  padding: 10px;
+}
+
+.advanced-filter-sidebar {
+  width: 30%;
+  background-color: var(--primary-color);
+  padding: 20px 0;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+.advanced-filter-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.advanced-filter-sidebar li {
+  padding: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.advanced-filter-content {
+  width: 70%;
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.advanced-filter-content-section {
+  display: none;
+}
+
+.advanced-filter-content-section.active {
+  display: block;
+}
+
+.advanced-filter-content label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.advanced-filter-content select, 
+input[type="text"],
+input[type="date"] {
+  padding: 8px 10px;
+  border: 1px solid var(--border-color);
+  border-radius:8px;
+  font-size:10px;
+  font-weight:bolder;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.advanced-filter-content input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 10px;
+}
 .candidate-table {
   width: 100%;
 }
@@ -1053,15 +1191,20 @@ tbody tr svg {
   background-color: #fafafa;
 }
 
-.additional-info.open {
+.additional-info-row  {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  background-color: #fff; /* Adjust background color as needed */
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .info-group {
-  margin-bottom: 10px;
+
+  color: #333; /* White text for the info labels */
+    margin-right: 20px;
 }
 
 .info-label {
@@ -1070,17 +1213,32 @@ tbody tr svg {
   margin-right: 5px;
 }
 
-
+.button-group {
+    display: flex;
+    gap: 10px;
+}
 .icon-button {
   background: none;
   border: none;
   cursor: pointer;
   margin-right: 10px;
-  color: #007bff;
+  color: var(--secondary-color);
   font-size: 1.2em;
   transition: color 0.3s ease;
 }
+.comments-section {
+    margin-top: 10px;
+    width: 100%;
+}
 
+.comments-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333; /* Adjust the border color as needed */
+    border-radius: 5px;
+ 
+    color: #fff; /* Input text color */
+}
 .icon-button:hover {
   color: #0056b3;
 }
@@ -1099,151 +1257,8 @@ tbody tr svg {
   background-color: #0056b3;
 }
 
-.advanced-filter-container {
-  position: relative;
-  max-width: 1000px;
-}
 
-.advanced-filter-button {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 6px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.advanced-filter-button:hover {
-  background-color: var(--secondary-color);
-}
-
-.advanced-popup-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.filter-count {
-  background-color: white;
-  color: var(--primary-color);
-  border-radius: 50%;
-  padding: 2px 6px;
-  margin-left: 5px;
-  font-size: 12px;
-}
-
-.advanced-popup-container {
-
-  transform: translateY(10px);
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 40%;
-
-}
-
-.advanced-filter-popup {
-  display: flex;
-  flex-direction: column;
-  height: 600px;
-}
-
-.advanced-filter-popup-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #005f73;
-  color: white;
-  border-radius: 8px 8px 0 0;
-  align-items: center;
-}
-
-.advanced-filter-popup-title {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.advanced-close-popup {
-  font-size: 24px;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.advanced-close-popup:hover {
-  color: #ddd;
-}
-
-.advanced-filter-popup-content {
-  display: flex;
-  padding: 10px;
-}
-
-.advanced-filter-sidebar {
-  width: 30%;
-  background-color: var(--primary-color);
-  padding: 20px 0;
-  overflow-y: auto;
-  border-radius: 8px;
-}
-
-.advanced-filter-sidebar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.advanced-filter-sidebar li {
-  padding: 5px;
-  margin-bottom: 5px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.advanced-filter-content {
-  width: 70%;
-  flex-grow: 1;
-  padding: 20px;
-  overflow-y: auto;
-}
-
-.advanced-filter-content-section {
-  display: none;
-}
-
-.advanced-filter-content-section.active {
-  display: block;
-}
-
-.advanced-filter-content label {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--text-color);
-  font-weight: bold;
-}
-
-.advanced-filter-content select,
-input[type="text"],
-input[type="date"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.advanced-filter-content input[type="checkbox"],
-input[type="radio"] {
-  margin-right: 10px;
-}
-
-/* Profile page */
+/* Profile page
 .profile {
   display: flex;
   flex-direction: row;
@@ -1305,7 +1320,7 @@ section {
 .progress-ring__circle {
   stroke-dasharray: 364;
   stroke-dashoffset: 91;
-  /* 75% filled */
+
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
 }
@@ -1329,7 +1344,7 @@ section {
 .icon {
   width: 20px;
   height: 20px;
-  /* background-color: #008080; */
+ 
 }
 
 .admin-info {
@@ -1367,15 +1382,15 @@ section {
   font-size: 16px;
 }
 
-/* Placeholder for icons - replace with actual icons */
+
 .icon {
   display: inline-block;
   width: 20px;
   height: 20px;
-  /* background-color: #008080; */
+ 
 }
 
-/* Add more styles to match the design in the image */
+
 .form-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -1383,7 +1398,7 @@ section {
   font-family: Arial, sans-serif;
 }
 
-.form-title-header h2 {
+/* .form-title-header h2 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
@@ -1411,13 +1426,13 @@ section {
   grid-column: 1 / -1;
 }
 
-label {
+.profile label {
   margin-bottom: 5px;
   font-weight: bold;
   color: #555;
 }
 
-input[type="text"],
+.profile input[type="text"],
 input[type="tel"],
 input[type="email"],
 input[type="date"],
@@ -1429,9 +1444,9 @@ select {
   width: 100%;
   background-color: #fafafa;
   transition: border-color 0.3s;
-}
+} 
 
-input[type="text"]:focus,
+ .profile input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="email"]:focus,
 input[type="date"]:focus,
@@ -1617,4 +1632,4 @@ textarea {
   .date-inputs {
     flex-direction: column;
   }
-}
+}  */
