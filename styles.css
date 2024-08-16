@@ -96,7 +96,7 @@ body {
 }
 
 .sidebar-nav ul li {
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
 .sidebar-nav a {
@@ -104,7 +104,7 @@ body {
   align-items: center;
   color: white;
   width: 100%;
-  padding: 5px 20px;
+  padding: 8px 20px;
   text-decoration: none;
   font-size: 16px;
   color: var(--text-color);
@@ -125,7 +125,9 @@ body {
  
 }
 
-.sidebar-nav li.active > a {
+.sidebar-nav li.active > a,
+.dropdown.active > a,
+.dropdown-menu li.active > a {
   background-color: white;
   color: #006b77;
   border-radius: 5px;
