@@ -327,54 +327,59 @@ function sortTable(columnIndex, ascending) {
     document.querySelector(`#projectTable th:nth-child(${columnIndex + 1})`).classList.toggle('th-sort-desc', !ascending);
 }
 
+let candidatesData = [];
 
 async function fetchData() {
-        try {
-            const response = await fetch('../../../../Internal-CRM/global-data.json');
-            const candidatesData = await response.json();
-            populateGlobalDatabaseTable(candidatesData);
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
+    try {
+        const response = await fetch('../../../../Internal-CRM/global-data.json');
+        candidatesData = await response.json();
+        populateFilterOptions();
+        populateGlobalDatabaseTable(candidatesData);
+        setupFiltersAndSearch();
+    } catch (error) {
+        console.error('Error fetching data:', error);
     }
+}
 
-    function createCandidateDiv(data) {
-        const div = document.createElement('div');
-        div.className = 'leads-candidate-data';
+function createCandidateTableRow(data) {
+    const tr = document.createElement('tr');
+    tr.className = 'leads-candidate-data';
 
-        const summary = document.createElement('div');
-        summary.className = 'candidate-summary';
-        summary.innerHTML = `
-        <input type="checkbox" class="checkbox">
-        <div class="caret-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg></div>
+    tr.innerHTML = `
+        <td><input type="checkbox" class="checkbox"></td>
+        <td class="caret-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg></td>
+        <td>
             <img src="${data['display picture']}" alt="${data.name}" class="candidate-image">
-            <div class="candidate-info">
-                <div class="candidate-main-info">
-                    <span class="candidate-id">ID: ${data.id}</span>
-                    <span class="candidate-name">${data.name}</span>
-                    <span class="candidate-contact">${data.mobileNumber} | ${data.email}</span>
-                </div>
-                <div class="candidate-details">
-                    <span>${data.experience}</span>
-                    <span>${data.department}</span>
-                    <select class="status-select">
-                        <option value="active" ${data.status === 'Active' ? 'selected' : ''}>Active</option>
-                        <option value="inactive" ${data.status === 'Inactive' ? 'selected' : ''}>Inactive</option>
-                    </select>
-                </div>
-                <div class="action-dots">⋮</div>
-            </div>
-        `;
+            ${data.id}
+        </td>
+        <td>${data.name}</td>
+        <td>${data.mobileNumber}</td>
+        <td>${data.email}</td>
+        <td>${data.experience}</td>
+        <td>${data.department}</td>
+        <td>${data.qualification}</td>
+        <td>
+            <select class="status-select">
+                <option value="active" ${data.status === 'Active' ? 'selected' : ''}>Active</option>
+                <option value="inactive" ${data.status === 'Inactive' ? 'selected' : ''}>Inactive</option>
+            </select>
+        </td>
+        <td>
+            <div class="action-dots">⋮</div>
+        </td>
+    `;
 
-        const additionalInfo = document.createElement('div');
-        additionalInfo.className = 'additional-info';
-        additionalInfo.innerHTML = `
+    const additionalInfoRow = document.createElement('tr');
+    additionalInfoRow.className = 'additional-info';
+    additionalInfoRow.style.display = 'none';
+    additionalInfoRow.innerHTML = `
+        <td colspan="11">
             <div class="info-group"><span class="info-label">Gender:</span>${data.gender}</div>
-            <div class="info-group"><span class="info-label">Passport:</span>Not Available</div>
+            <div class="info-group"><span class="info-label">Passport:</span>${data.passportNumber || 'Not Available'}</div>
             <div class="info-group"><span class="info-label">Client Label:</span>${data.clients.label}</div>
             <div class="info-group"><span class="info-label">Client Status:</span>${data.clients.clientStatus}</div>
             <div class="button-group">
-                <button class="icon-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+               <button class="icon-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
   <path fill="currentColor" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z"/>
 </svg></button>
                 <button class="icon-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100">
@@ -399,42 +404,171 @@ async function fetchData() {
 </svg></button>
                 <button class="submit-button">Submit</button>
             </div>
-        `;
+        </td>
+    `;
 
-        div.appendChild(summary);
-        div.appendChild(additionalInfo);
-
-        const caretIcon = summary.querySelector('.caret-icon');
-        caretIcon.addEventListener('click', (e) => {
-            e.stopPropagation();
-            additionalInfo.classList.toggle('open');
-            caretIcon.classList.toggle('open');
-        });
-
-        return div;
-    }
-
-    function populateGlobalDatabaseTable(candidatesData) {
-        const container = document.getElementById('candidateContainer');
-        candidatesData.forEach(data => {
-            const candidateDiv = createCandidateDiv(data);
-            container.appendChild(candidateDiv);
-        });
-    }
-
-    function initializeFilters() {
-        // Implement filter logic here
-    }
-
-    function setupSearch() {
-        const searchInput = document.getElementById('searchInput');
-        searchInput.addEventListener('input', () => {
-            // Implement search logic here
-        });
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        fetchData();
-        initializeFilters();
-        setupSearch();
+    const caretIcon = tr.querySelector('.caret-icon');
+    caretIcon.addEventListener('click', (e) => {
+        e.stopPropagation();
+        additionalInfoRow.style.display = additionalInfoRow.style.display === 'none' ? 'table-row' : 'none';
+        caretIcon.classList.toggle('open');
     });
+
+    const checkbox = tr.querySelector('.checkbox');
+    checkbox.addEventListener('change', updateSelectAllCheckbox);
+
+    return [tr, additionalInfoRow];
+}
+
+function populateGlobalDatabaseTable(candidatesData) {
+    const table = document.getElementById('candidateTable');
+    const tbody = table.querySelector('tbody') || table.createTBody();
+    
+    tbody.innerHTML = ''; // Clear existing rows
+    
+    candidatesData.forEach(data => {
+        const [candidateRow, additionalInfoRow] = createCandidateTableRow(data);
+        tbody.appendChild(candidateRow);
+        tbody.appendChild(additionalInfoRow);
+    });
+
+    const selectAllCheckbox = document.getElementById('selectAll');
+    selectAllCheckbox.addEventListener('change', function() {
+        const checkboxes = tbody.querySelectorAll('.checkbox');
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = this.checked;
+        });
+    });
+}
+
+function updateSelectAllCheckbox() {
+    const selectAllCheckbox = document.getElementById('selectAll');
+    const checkboxes = document.querySelectorAll('.checkbox');
+    selectAllCheckbox.checked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+}
+
+function populateFilterOptions() {
+    const filters = {
+        'statusFilter': 'status',
+        'genderFilter': 'gender',
+        'ageFilter': 'age',
+        'qualificationFilter': 'qualification',
+        'departmentFilter': 'department',
+        'degreeFilter': 'degree',
+        'examStatusFilter': 'examStatus',
+        'experienceFilter': 'experience'
+    };
+
+    Object.entries(filters).forEach(([filterId, dataKey]) => {
+        const filterElement = document.getElementById(filterId);
+        const uniqueValues = [...new Set(candidatesData.map(candidate => candidate[dataKey]))];
+        
+        filterElement.innerHTML = '<option value="">All</option>' + 
+            uniqueValues.map(value => `<option value="${value}">${value}</option>`).join('');
+    });
+}
+function populateFilterOptions() {
+    const filters = {
+        'statusFilter': 'status',
+        'genderFilter': 'gender',
+        'ageFilter': 'age',
+        'qualificationFilter': 'qualification',
+        'departmentFilter': 'department',
+        'degreeFilter': 'degree',
+        'examStatusFilter': 'examStatus',
+        'experienceFilter': 'experience'
+    };
+
+    Object.entries(filters).forEach(([filterId, dataKey]) => {
+        const filterElement = document.getElementById(filterId);
+        const uniqueValues = [...new Set(candidatesData.map(candidate => candidate[dataKey]))];
+        
+        // Keep the first option (e.g., "Status", "Gender", etc.)
+        const firstOption = filterElement.options[0];
+        filterElement.innerHTML = '';
+        filterElement.appendChild(firstOption);
+        
+        // Add other options
+        uniqueValues.forEach(value => {
+            if (value && value !== firstOption.textContent) {
+                const option = document.createElement('option');
+                option.value = value;
+                option.textContent = value;
+                filterElement.appendChild(option);
+            }
+        });
+    });
+}
+function applyFilters() {
+    const filters = {
+        status: document.getElementById('statusFilter').value,
+        gender: document.getElementById('genderFilter').value,
+        age: document.getElementById('ageFilter').value,
+        qualification: document.getElementById('qualificationFilter').value,
+        department: document.getElementById('departmentFilter').value,
+        degree: document.getElementById('degreeFilter').value,
+        examStatus: document.getElementById('examStatusFilter').value,
+        experience: document.getElementById('experienceFilter').value
+    };
+
+    const searchKeyword = document.getElementById('searchInput').value.toLowerCase();
+
+    const filteredData = candidatesData.filter(candidate => {
+        return Object.entries(filters).every(([key, value]) => 
+            value === '' || candidate[key] === value
+        ) && (searchKeyword === '' || JSON.stringify(candidate).toLowerCase().includes(searchKeyword));
+    });
+
+    updateFilterCount(filteredData.length);
+    populateGlobalDatabaseTable(filteredData);
+}
+
+function updateFilterCount(count) {
+    document.querySelector('.filter-count').textContent = count;
+}
+
+function setupFiltersAndSearch() {
+    const filterSelects = document.querySelectorAll('.filter-select');
+    filterSelects.forEach(select => select.addEventListener('change', applyFilters));
+
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', applyFilters);
+
+    const filterBtn = document.getElementById('filterBtn');
+    filterBtn.addEventListener('click', applyFilters);
+}
+
+document.addEventListener('DOMContentLoaded', fetchData);
+document.getElementById('advancedFilterBtn').addEventListener('click', function () {
+    document.querySelector('.advanced-popup-overlay').style.display = 'block';
+});
+
+document.getElementById('advancedClosePopup').addEventListener('click', function () {
+    document.querySelector('.advanced-popup-overlay').style.display = 'none';
+});
+
+document.querySelector('.advanced-popup-overlay').addEventListener('click', function (event) {
+    if (event.target === this) {
+        document.querySelector('.advanced-popup-overlay').style.display = 'none';
+    }
+});
+
+document.querySelectorAll('.advanced-filter-sidebar li').forEach(function (item) {
+    item.addEventListener('click', function () {
+        document.querySelectorAll('.advanced-filter-content-section').forEach(function (section) {
+            section.classList.remove('active');
+        });
+        document.getElementById(this.getAttribute('data-filter') + 'Filter').classList.add('active');
+    });
+});
+function setProgress(percent) {
+  const circle = document.querySelector('.progress-ring__circle');
+  const radius = circle.r.baseVal.value;
+  const circumference = radius * 2 * Math.PI;
+  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+  const offset = circumference - percent / 100 * circumference;
+  circle.style.strokeDashoffset = offset;
+}
+
+// Set to 75% as an example
+setProgress(45);

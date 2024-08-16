@@ -133,7 +133,169 @@
         </div>
         <div class="main-content">
       <div class="filter-section">
-        <button class="filter-button" id="filterBtn">Filter <span class="filter-count">0</span></button>
+<div class="advanced-filter-container">
+    <button class="advanced-filter-button" id="advancedFilterBtn">Filter <span class="filter-count">0</span></button>
+    <div class="advanced-popup-overlay">
+        <div class="advanced-popup-container">
+            <div class="advanced-filter-popup" id="advancedFilterPopup">
+                <div class="advanced-filter-popup-header">
+                    <span class="advanced-filter-popup-title">Advanced Filters</span>
+                    <span class="advanced-close-popup" id="advancedClosePopup">&times;</span>
+                </div>
+                <div class="advanced-filter-popup-content">
+                    <!-- Sidebar for filters -->
+                    <div class="advanced-filter-sidebar">
+                        <ul>
+                            <li data-filter="leads">Leads</li>
+                            <li data-filter="country">Country</li>
+                            <li data-filter="clients">Clients</li>
+                            <li data-filter="candidate">Candidate</li>
+                            <li data-filter="star-count">Star Count</li>
+                            <li data-filter="times-imported">No. of Times Imported</li>
+                            <li data-filter="others">Others</li>
+                        </ul>
+                    </div>
+                    <!-- Content section for the selected filter -->
+                    <div class="advanced-filter-content">
+
+                        <!-- Leads Section -->
+                        <div id="leadsFilter" class="advanced-filter-content-section">
+                            <label for="assignedTo">Assigned to</label>
+                            <select id="assignedTo">
+                                <option>Agent 1</option>
+                                <option>Agent 2</option>
+                                <option>Agent 3</option>
+                            </select>
+                            <br>
+                            <label for="fromDate">From</label>
+                            <input type="date" id="fromDate">
+                            <label for="toDate">To</label>
+                            <input type="date" id="toDate">
+                            <br>
+                            <label for="createdBy">Created by</label>
+                            <select id="createdBy">
+                                <option>Agent 1</option>
+                                <option>Agent 2</option>
+                                <option>Agent 3</option>
+                            </select>
+                            <br>
+                            <label for="agent">Choose the Agent</label>
+                            <select id="agent">
+                                <option>Agent 1</option>
+                                <option>Agent 2</option>
+                                <option>Agent 3</option>
+                            </select>
+                        </div>
+
+                        <!-- Country Section -->
+                        <div id="countryFilter" class="advanced-filter-content-section">
+                            <label for="originCountry">Origin of Country</label>
+                            <input type="text" id="originCountry">
+                            <br>
+                            <label for="importedCountry">Imported Country</label>
+                            <input type="text" id="importedCountry">
+                        </div>
+
+                        <!-- Clients Section -->
+                        <div id="clientsFilter" class="advanced-filter-content-section">
+                            <label for="client">Client</label>
+                            <select id="client">
+                                <option>Client 1</option>
+                                <option>Client 2</option>
+                                <option>Client 3</option>
+                            </select>
+                            <br>
+                            <label for="clientStatus">Client Status</label>
+                            <select id="clientStatus">
+                                <option>Status 1</option>
+                                <option>Status 2</option>
+                                <option>Status 3</option>
+                            </select>
+                            <br>
+                            <label for="label">Label</label>
+                            <select id="label">
+                                <option>Label 1</option>
+                                <option>Label 2</option>
+                                <option>Label 3</option>
+                            </select>
+                        </div>
+
+                        <!-- Candidate Section -->
+                        <div id="candidateFilter" class="advanced-filter-content-section">
+                            <label for="interest">Interest</label>
+                            <select id="interest">
+                                <option>High</option>
+                                <option>Medium</option>
+                                <option>Low</option>
+                            </select>
+                        </div>
+
+                        <!-- Star Count Section -->
+                        <div id="starCountFilter" class="advanced-filter-content-section">
+                            <label for="starCount">Star Count</label>
+                            <div>
+                                <input type="radio" id="star1" name="starCount" value="1">
+                                <label for="star1">1</label>
+                                <input type="radio" id="star2" name="starCount" value="2">
+                                <label for="star2">2</label>
+                                <input type="radio" id="star3" name="starCount" value="3">
+                                <label for="star3">3</label>
+                                <input type="radio" id="star4" name="starCount" value="4">
+                                <label for="star4">4+</label>
+                            </div>
+                        </div>
+
+                        <!-- No. of Times Imported Section -->
+                        <div id="timesImportedFilter" class="advanced-filter-content-section">
+                            <label for="timesImported">No. of Times Imported</label>
+                            <div>
+                                <input type="radio" id="times1" name="timesImported" value="1">
+                                <label for="times1">1</label>
+                                <input type="radio" id="times2" name="timesImported" value="2">
+                                <label for="times2">2</label>
+                                <input type="radio" id="times3" name="timesImported" value="3">
+                                <label for="times3">3+</label>
+                            </div>
+                        </div>
+
+                        <!-- Others Section -->
+                        <div id="othersFilter" class="advanced-filter-content-section">
+                            <input type="checkbox" id="all">
+                            <label for="all">All</label>
+                            <br>
+                            <input type="checkbox" id="inCRM">
+                            <label for="inCRM">In CRM</label>
+                            <br>
+                            <input type="checkbox" id="notInCRM">
+                            <label for="notInCRM">Not in CRM</label>
+                            <br>
+                            <input type="checkbox" id="waitingApproval">
+                            <label for="waitingApproval">Waiting for Approval</label>
+                            <br>
+                            <input type="checkbox" id="inPool">
+                            <label for="inPool">In Pool</label>
+                            <br>
+                            <input type="checkbox" id="waitingRemoval">
+                            <label for="waitingRemoval">Waiting for Removal</label>
+                            <br>
+                            <input type="checkbox" id="showReassigned">
+                            <label for="showReassigned">Show Reassigned Leads</label>
+                            <br>
+                            <input type="checkbox" id="excludeRejected">
+                            <label for="excludeRejected">Exclude Rejected Leads</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="advanced-filter-popup-footer">
+                    <button class="apply-filter">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
         <select class="filter-select" id="statusFilter"><option>Status</option></select>
         <select class="filter-select" id="genderFilter"><option>Gender</option></select>
         <select class="filter-select" id="ageFilter"><option>Age</option></select>
@@ -144,7 +306,28 @@
         <select class="filter-select" id="experienceFilter"><option>Experience</option></select>
         <input type="text" class="search-input" id="searchInput" placeholder="Search for any keyword...">
     </div>
-  <div id="candidateContainer" class="candidate-table"></div>
+  <div  class="candidate-table">
+    <table id="candidateTable">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="selectAll"></th>
+                <th></th>
+                <th>Candidate ID</th>
+                <th>Name of the Candidate</th>
+                <th>Contact No</th>
+                <th>Mail ID</th>
+                <th>Experience</th>
+                <th>Department</th>
+                <th>Qualification</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be inserted here -->
+        </tbody>
+    </table>
+  </div>
     </div>
     </div>
 <script src="../../../../Internal-CRM/scripts.js"></script>
