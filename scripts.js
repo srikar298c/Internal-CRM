@@ -1,5 +1,5 @@
 // For sidebar active link
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const currentFolder = window.location.pathname.split('/').slice(-2, -1)[0];
     const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
     sidebarLinks.forEach(link => {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dropdown menu functionality
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(event) {
+        toggle.addEventListener('click', function (event) {
             event.preventDefault();
             const parent = this.parentElement;
             const isOpen = parent.classList.contains('active');
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close dropdown if clicked outside
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         if (!event.target.closest('.dropdown')) {
             document.querySelectorAll('.dropdown').forEach(dropdown => {
                 dropdown.classList.remove('active');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 // dashboard
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const currentPath = window.location.pathname.split('/').pop();
     const dashboardLinks = document.querySelectorAll('.dashboard-nav-button a');
     dashboardLinks.forEach(link => {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Collapsible sections
     const latestUpdateHeaders = document.querySelectorAll('.latestupdate-header');
     latestUpdateHeaders.forEach(header => {
-        header.addEventListener('click', function() {
+        header.addEventListener('click', function () {
             const details = this.nextElementSibling;
             const isOpen = details.classList.contains('open');
 
@@ -94,6 +94,7 @@ function populateProjectTable(data) {
     data.forEach(project => {
         const row = document.createElement('tr');
         row.innerHTML = `
+            <td><input type="checkbox" class="checkbox"></td>
             <td>${project.country}</td>
             <td>${project.projectName}</td>
             <td>
@@ -103,10 +104,10 @@ function populateProjectTable(data) {
                 </div>
             </td>
             <td>
-                ${project.activeMembers.map(member => `
-                    <span class="member-name">${member.name}</span>
-                    <span class="member-phone">${member.phone}</span>
-                `).join('<br>')}
+                ${project.activeMembers.map(member =>
+            `<span class="member-name">${member.name}</span>
+                    <span class="member-phone">${member.phone}</span>`
+        ).join('<br>')}
             </td>
             <td>
                 <span class="member-name">${project.createdBy.name}</span>
@@ -132,7 +133,20 @@ function populateProjectTable(data) {
         `;
         tableBody.appendChild(row);
     });
+
+    // Add event listener after all checkboxes are created
+    const checkboxes = document.querySelectorAll('.checkbox');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateSelectAllCheckbox);
+    });
 }
+
+function updateSelectAllCheckbox() {
+    const selectAllCheckbox = document.getElementById('selectAll');
+    const checkboxes = document.querySelectorAll('.checkbox');
+    selectAllCheckbox.checked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+}
+
 
 // Populate the country filter dropdown
 function populateCountryFilter(data) {
@@ -145,6 +159,8 @@ function populateCountryFilter(data) {
         countryFilter.appendChild(option);
     });
 }
+// Add an event listener to the country filter dropdown
+document.getElementById('countryFilter').addEventListener('change', filterTable);
 
 // Filter the table based on selected country
 function filterTable() {
@@ -155,21 +171,6 @@ function filterTable() {
     populateProjectTable(filteredData);
 }
 // Show popup with project details
-function showPopup(country) {
-    const project = projectData.find(p => p.country === country);
-    if (!project) return;
-
-    const popup = document.getElementById('popup');
-    const popupHeader = popup.querySelector('.project-popup-header');
-    
-    popupHeader.querySelector('.country').textContent = project.country;
-    popupHeader.querySelector('.project-name').textContent = project.projectName;
-    popupHeader.querySelector('.project-status').innerHTML = `${project.label} <span class="label-${project.status.toLowerCase()}">${project.status}</span>`;
-
-    popup.classList.add('active');
-    showTabContent('eligibility', project);
-}
-
 // Show popup with project details
 function showPopup(country) {
     const project = projectData.find(p => p.country === country);
@@ -177,13 +178,13 @@ function showPopup(country) {
 
     const popup = document.getElementById('popup');
     const popupHeader = popup.querySelector('.project-popup-header');
-    
+
     popupHeader.querySelector('.country').innerHTML = ` 📍${project.country}`;
     popupHeader.querySelector('.project-name').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M29.29 5H27v2h2v25H7V7h2V5H7a1.75 1.75 0 0 0-2 1.69v25.62A1.7 1.7 0 0 0 6.71 34h22.58A1.7 1.7 0 0 0 31 32.31V6.69A1.7 1.7 0 0 0 29.29 5" class="clr-i-outline clr-i-outline-path-1"/><path fill="currentColor" d="M26 7.33A2.34 2.34 0 0 0 23.67 5h-1.8a4 4 0 0 0-7.75 0h-1.79A2.34 2.34 0 0 0 10 7.33V11h16ZM24 9H12V7.33a.33.33 0 0 1 .33-.33H16V6a2 2 0 0 1 4 0v1h3.67a.33.33 0 0 1 .33.33Z" class="clr-i-outline clr-i-outline-path-2"/><path fill="currentColor" d="M11 14h14v2H11z" class="clr-i-outline clr-i-outline-path-3"/><path fill="currentColor" d="M11 18h14v2H11z" class="clr-i-outline clr-i-outline-path-4"/><path fill="currentColor" d="M11 22h14v2H11z" class="clr-i-outline clr-i-outline-path-5"/><path fill="currentColor" d="M11 26h14v2H11z" class="clr-i-outline clr-i-outline-path-6"/><path fill="none" d="M0 0h36v36H0z"/></svg> ${project.projectName}`;
     popupHeader.querySelector('.project-status').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m20 12l-3.58 5.073q-.314.439-.79.683T14.616 18h-9q-.672 0-1.144-.472T4 16.385v-8.77q0-.67.472-1.143Q4.944 6 5.616 6h9q.557 0 1.024.264q.466.263.78.701zm-1.22 0l-3.203-4.5q-.154-.212-.413-.356Q14.904 7 14.616 7h-9q-.231 0-.424.192T5 7.616v8.769q0 .23.192.423t.423.192h9q.289 0 .549-.144q.259-.144.413-.356zM5 12v5V7z"/></svg> ${project.label} <span class="label-${project.status.toLowerCase()}">${project.status}</span>`;
 
     popup.classList.add('active');
-    showTabContent('eligibility', project); // Show the default tab content
+    showTabContent('eligibility', project);
 }
 
 // Show content for the selected tab in popup
@@ -199,7 +200,7 @@ function showTabContent(tab, project) {
                     <tbody>
                         ${Object.entries(project.eligibilityCriteria).map(([key, value]) => `
                             <tr>
-                                <td><strong>${key}:</strong></td>
+                                <td><strong>${key}</strong></td>
                                 <td>${value}</td>
                             </tr>
                         `).join('')}
@@ -229,7 +230,7 @@ function showTabContent(tab, project) {
                     <tbody>
                         ${project.standardProcedure.map((step, index) => `
                             <tr>
-                                <td><strong>${index + 1}:</strong></td>
+                                <td><strong>${index + 1}</strong></td>
                                 <td>${step}</td>
                             </tr>
                         `).join('')}
@@ -244,7 +245,7 @@ function showTabContent(tab, project) {
                     <tbody>
                         ${Object.entries(project.serviceCharges).map(([key, value]) => `
                             <tr>
-                                <td><strong>${key}:</strong></td>
+                                <td><strong>${key}</strong></td>
                                 <td>${value}</td>
                             </tr>
                         `).join('')}
@@ -282,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.project-popup-tab').forEach(btn => btn.classList.remove('active'));
             tabBtn.classList.add('active');
             const tab = tabBtn.dataset.tab;
-            const country = popup.querySelector('.country').textContent.trim().slice(1);
+            const country = popup.querySelector('.country').textContent.trim().slice(2); // Remove the 📍 emoji
             const project = projectData.find(p => p.country === country);
             showTabContent(tab, project);
         }
@@ -295,14 +296,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-    document.querySelectorAll('#projectTable th').forEach(headerCell => {
-        headerCell.addEventListener('click', () => {
-            const columnIndex = headerCell.cellIndex;
-            const isAscending = headerCell.classList.contains('th-sort-asc');
+document.querySelectorAll('#projectTable th').forEach(headerCell => {
+    headerCell.addEventListener('click', () => {
+        const columnIndex = headerCell.cellIndex;
+        const isAscending = headerCell.classList.contains('th-sort-asc');
 
-            sortTable(columnIndex, !isAscending);
-        });
+        sortTable(columnIndex, !isAscending);
     });
+});
 
 
 function sortTable(columnIndex, ascending) {
@@ -423,9 +424,9 @@ function createCandidateTableRow(data) {
 function populateGlobalDatabaseTable(candidatesData) {
     const table = document.getElementById('candidateTable');
     const tbody = table.querySelector('tbody') || table.createTBody();
-    
+
     tbody.innerHTML = ''; // Clear existing rows
-    
+
     candidatesData.forEach(data => {
         const [candidateRow, additionalInfoRow] = createCandidateTableRow(data);
         tbody.appendChild(candidateRow);
@@ -433,7 +434,7 @@ function populateGlobalDatabaseTable(candidatesData) {
     });
 
     const selectAllCheckbox = document.getElementById('selectAll');
-    selectAllCheckbox.addEventListener('change', function() {
+    selectAllCheckbox.addEventListener('change', function () {
         const checkboxes = tbody.querySelectorAll('.checkbox');
         checkboxes.forEach(checkbox => {
             checkbox.checked = this.checked;
@@ -462,8 +463,8 @@ function populateFilterOptions() {
     Object.entries(filters).forEach(([filterId, dataKey]) => {
         const filterElement = document.getElementById(filterId);
         const uniqueValues = [...new Set(candidatesData.map(candidate => candidate[dataKey]))];
-        
-        filterElement.innerHTML = '<option value="">All</option>' + 
+
+        filterElement.innerHTML = '<option value="">All</option>' +
             uniqueValues.map(value => `<option value="${value}">${value}</option>`).join('');
     });
 }
@@ -482,12 +483,12 @@ function populateFilterOptions() {
     Object.entries(filters).forEach(([filterId, dataKey]) => {
         const filterElement = document.getElementById(filterId);
         const uniqueValues = [...new Set(candidatesData.map(candidate => candidate[dataKey]))];
-        
+
         // Keep the first option (e.g., "Status", "Gender", etc.)
         const firstOption = filterElement.options[0];
         filterElement.innerHTML = '';
         filterElement.appendChild(firstOption);
-        
+
         // Add other options
         uniqueValues.forEach(value => {
             if (value && value !== firstOption.textContent) {
@@ -514,7 +515,7 @@ function applyFilters() {
     const searchKeyword = document.getElementById('searchInput').value.toLowerCase();
 
     const filteredData = candidatesData.filter(candidate => {
-        return Object.entries(filters).every(([key, value]) => 
+        return Object.entries(filters).every(([key, value]) =>
             value === '' || candidate[key] === value
         ) && (searchKeyword === '' || JSON.stringify(candidate).toLowerCase().includes(searchKeyword));
     });
@@ -562,12 +563,12 @@ document.querySelectorAll('.advanced-filter-sidebar li').forEach(function (item)
     });
 });
 function setProgress(percent) {
-  const circle = document.querySelector('.progress-ring__circle');
-  const radius = circle.r.baseVal.value;
-  const circumference = radius * 2 * Math.PI;
-  circle.style.strokeDasharray = `${circumference} ${circumference}`;
-  const offset = circumference - percent / 100 * circumference;
-  circle.style.strokeDashoffset = offset;
+    const circle = document.querySelector('.progress-ring__circle');
+    const radius = circle.r.baseVal.value;
+    const circumference = radius * 2 * Math.PI;
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    const offset = circumference - percent / 100 * circumference;
+    circle.style.strokeDashoffset = offset;
 }
 
 // Set to 75% as an example
